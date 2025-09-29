@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - UFL Pakistan</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: #f9fbfd;
+      color: #333;
+    }
+
+    /* Hero */
+    .hero {
+      background-image: url("IMG/new.jfif");
+      height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #002a5c;
+      margin-top: 10px;
+     
+    }
+    .hero p {
+      margin-top: 12px;
+      font-size: 1.2rem;
+      color: #002a5c;
+       font-weight: bolder;
+       margin-bottom: 30px;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      padding: 100px 20px;
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+    }
+
+    /* Info box */
+    .contact-info {
+      background: linear-gradient(135deg, #002a5c, #004080);
+      color: #fff;
+      padding: 50px 40px;
+      border-radius: 20px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+    }
+    .contact-info h2 {
+      margin-bottom: 30px;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    .info-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+    .info-item i {
+      font-size: 1.6rem;
+      color: #ff4b5c;
+      margin-right: 14px;
+    }
+
+    /* Form box */
+    .contact-form {
+      background: #fff;
+      padding: 50px 40px;
+      border-radius: 20px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+    }
+    .contact-form h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #002a5c;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 18px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #d90012;
+      outline: none;
+      box-shadow: 0 0 6px rgba(217,0,18,0.3);
+    }
+    .contact-form button {
+      background: linear-gradient(90deg, #d90012, #ff4b5c);
+      color: #fff;
+      border: none;
+      padding: 14px 32px;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .contact-form button:hover {
+      background: linear-gradient(90deg, #002a5c, #004080);
+    }
+
+    /* Map Section */
+    .map-section {
+      margin-top: 60px;
+    }
+    .map-section iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+    }
+
+    /* Responsive */
+    @media (max-width: 950px) {
+      .contact-section {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div>
+      <h1>Contact UFL Pakistan</h1>
+      <p>We’re here to help you move your business forward</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      <div class="info-item"><i class="fa-solid fa-location-dot"></i><p>123 Business Avenue, Karachi, Pakistan</p></div>
+      <div class="info-item"><i class="fa-solid fa-envelope"></i><p>info@uflpakistan.com</p></div>
+      <div class="info-item"><i class="fa-solid fa-phone"></i><p>+92 300 1234567</p></div>
+      <div class="info-item"><i class="fa-solid fa-clock"></i><p>Mon - Sat: 9:00 AM - 6:00 PM</p></div>
+    </div>
+
+    <!-- Contact Form (Formspree integration) -->
+    <div class="contact-form">
+      <h2>Send Us a Message</h2>
+      <form action="https://formspree.io/f/mvgwkeak" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="_replyto" placeholder="Your Email" required>
+        <input type="text" name="phone" placeholder="Your Phone">
+        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="map-section">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.829835360215!2d67.00113621500238!3d24.86073498406006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e4d03f9b2d3%3A0xf38a2b68b3b66c6!2sKarachi!5e0!3m2!1sen!2s!4v1700000000000" 
+      allowfullscreen="" loading="lazy">
+    </iframe>
+  </section>
+
+</body>
+</html>
