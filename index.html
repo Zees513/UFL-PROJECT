@@ -252,28 +252,32 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-5">
-    <div class="container">
-      <h2 class="section-title text-center mb-5">Contact Us</h2>
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <form class="p-4 bg-light rounded shadow">
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Your Name" required>
-            </div>
-            <div class="mb-3">
-              <input type="email" class="form-control" placeholder="Your Email" required>
-            </div>
-            <div class="mb-3">
-              <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-danger w-100">Send Message</button>
-          </form>
-        </div>
+  <!-- Contact Form Section -->
+<section id="contact" class="py-5 bg-light" style="background-color: rgb(22, 21, 21);">
+  <div class="container">
+    <h2 class="text-center mb-4">Contact Us</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <form action="https://formspree.io/f/movkepbo" method="POST">
+          <div class="mb-3">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Your Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Your Message</label>
+            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Type your message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Send Message</button>
+        </form>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Footer -->
   <!-- Footer -->
