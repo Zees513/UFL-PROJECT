@@ -19,17 +19,17 @@
     a{color:inherit}
 
     .page{max-width:var(--container);margin:36px auto;padding:24px}
-    .header{display:flex;align-items:center;gap:18px;margin-bottom:12px}
-    .brand-logo img{height:64px;border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,0.06)}
+    .header{display:flex;align-items:center;gap:18px;margin-bottom:12px;flex-wrap:wrap;text-align:center;justify-content:center}
+    .brand-logo img{height:64px;max-width:100%;border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,0.06)}
     .brand-meta h1{margin:0;font-size:26px}
     .brand-meta p{margin:4px 0 0;color:#546174}
 
-    .controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:8px}
-    .tabs{display:flex;gap:8px;flex-wrap:wrap}
+    .controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:8px;justify-content:center}
+    .tabs{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
     .tab{background:#fff;padding:8px 14px;border-radius:999px;border:1px solid rgba(2,6,23,0.06);cursor:pointer;font-weight:700;color:var(--blue);box-shadow:0 6px 18px rgba(2,6,23,0.02)}
     .tab.active{background:var(--red);color:#fff;border-color:var(--red);box-shadow:0 10px 28px rgba(217,0,18,0.08)}
-    .sort{margin-left:auto;display:flex;gap:8px;align-items:center}
-    .select{padding:8px;border-radius:10px;border:1px solid #e6eef8;background:#fff}
+    .sort{margin-left:auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:center}
+    .select{padding:8px;border-radius:10px;border:1px solid #e6eef8;background:#fff;max-width:100%}
 
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:18px}
 
@@ -46,54 +46,56 @@
     .card-title{font-size:18px;margin:8px 0 6px;color:var(--blue);font-weight:800}
     .card-desc{color:#445066;font-size:14px;min-height:46px}
 
-    .card-meta{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border-top:1px solid #f1f5f9;background:#fff}
+    .card-meta{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border-top:1px solid #f1f5f9;background:#fff;flex-wrap:wrap;gap:10px}
     .meta-left{color:#6b7280;font-weight:700}
     .meta-actions{display:flex;gap:8px}
 
     .btn{padding:9px 12px;border-radius:10px;font-weight:800;border:0;cursor:pointer}
     .btn-ghost{background:transparent;border:1px solid rgba(2,6,23,0.06);color:var(--blue)}
-    /* Remove Know More from meta area - keep ghost/share only */
     .meta-actions .btn-know{display:none}
 
-    /* Overlay - show on hover (contains the Know More button) */
-    .card-overlay{
-      position:absolute;inset:0;
-      background:linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.52) 60%);
-      color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:18px;
-      opacity:0;transform:translateY(8px);transition:opacity .18s,transform .18s;
-      pointer-events:none; /* disable clicks until visible */
-    }
+    .card-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.52) 60%);color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:18px;opacity:0;transform:translateY(8px);transition:opacity .18s,transform .18s;pointer-events:none}
     .card:hover .card-overlay{opacity:1;transform:translateY(0);pointer-events:auto}
     .overlay-title{font-weight:900;font-size:18px}
     .overlay-text{font-size:13px;opacity:.95;margin-top:6px}
-
-    /* The Know More button lives in overlay, hidden by default on non-hover by pointer-events:none above */
     .overlay-actions{margin-top:10px;display:flex;gap:8px}
     .btn-primary{background:var(--red);color:#fff;border-radius:10px;padding:10px 14px;font-weight:800;border:0;cursor:pointer}
 
-    /* Modal */
     .modal{position:fixed;inset:0;background:rgba(2,6,23,0.5);display:flex;align-items:center;justify-content:center;padding:20px;z-index:999;opacity:0;pointer-events:none;transition:opacity .18s}
     .modal.show{opacity:1;pointer-events:auto}
-    .modal-card{width:100%;max-width:920px;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 22px 80px rgba(2,6,23,0.28)}
+    .modal-card{width:100%;max-width:920px;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 22px 80px rgba(2,6,23,0.28);position:relative}
     .modal-grid{display:grid;grid-template-columns:1fr 420px}
     .modal-media{height:420px;overflow:hidden;background:#e9f0fb}
     .modal-media img{width:100%;height:100%;object-fit:cover}
     .modal-content{padding:22px}
     .modal-content h3{margin:0 0 10px;color:var(--blue)}
-    .modal-actions{margin-top:12px;display:flex;gap:10px}
+    .modal-actions{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap}
     .modal-close{position:absolute;right:18px;top:14px;background:transparent;border:0;font-size:20px;cursor:pointer;color:#374151}
 
+    /* Responsive fixes */
     @media (max-width:920px){
       .modal-grid{grid-template-columns:1fr}
       .modal-media{height:240px}
+    }
+    @media (max-width:600px){
+      .brand-meta h1{font-size:20px}
+      .card-media{height:150px}
+      .overlay-title{font-size:16px}
+      .controls{flex-direction:column}
+      .sort{margin-left:0}
+    }
+    @media (max-width:400px){
+      .tabs{flex-direction:column;width:100%}
+      .tab{width:100%;text-align:center}
+      .modal-content{padding:14px}
+      .modal-content h3{font-size:18px}
     }
 
     .note{margin-top:14px;color:#6b7280;font-size:13px}
   </style>
 </head>
 <body>
-
-  <main class="page">
+<main class="page">
 
     <!-- Header with UFL logo -->
     <header class="header">
@@ -324,8 +326,7 @@
       Contact Us Today
     </a>
   </section>
-  
-  
+
 
   <script>
     // Tabs filter
@@ -397,3 +398,4 @@
 
 </body>
 </html>
+
