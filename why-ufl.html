@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why UFL Pakistan</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+  <style>
+    :root {
+      --blue: #002a5c;
+      --red: #e30613;
+      --light: #f5f7fa;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: var(--light);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      background: url("./IMG/hero.jfif") center/cover no-repeat;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 42, 92, 0.65);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 20px;
+      animation: fadeInUp 1.2s ease;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+    .hero h1 span { color: var(--red); }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+    .hero-btn {
+      background: var(--red);
+      padding: 12px 30px;
+      border-radius: 30px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .hero-btn:hover {
+      background: #fff;
+      color: var(--blue);
+    }
+
+    /* ===== WHY SECTION ===== */
+    .why {
+      padding: 80px 20px;
+      background: #fff;
+      text-align: center;
+    }
+    .why h2 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: var(--blue);
+    }
+    .why h2 span { color: var(--red); }
+    .why p.section-subtitle {
+      font-size: 1.1rem;
+      margin-bottom: 50px;
+      color: #555;
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+    .why-card {
+      background: var(--light);
+      border-radius: 16px;
+      padding: 30px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .why-card:hover {
+      background: #fff;
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    .why-icon {
+      font-size: 2.5rem;
+      color: var(--red);
+      margin-bottom: 20px;
+    }
+    .why-card h3 {
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+
+    /* ===== IMAGE WITH TEXT ===== */
+    .image-text {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      align-items: center;
+      gap: 40px;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, var(--blue), var(--red));
+      color: #fff;
+    }
+    .image-text img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+    }
+    .image-text h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    /* ===== COUNTERS ===== */
+    .counters {
+      padding: 80px 20px;
+      background: #fff;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      text-align: center;
+    }
+    .counter {
+      background: var(--light);
+      border-radius: 16px;
+      padding: 40px 20px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+    .counter:hover {
+      transform: scale(1.05);
+    }
+    .counter i {
+      font-size: 2.5rem;
+      color: var(--red);
+      margin-bottom: 15px;
+    }
+    .counter h3 {
+      font-size: 2rem;
+      color: var(--blue);
+      margin-bottom: 5px;
+    }
+
+    /* ===== TESTIMONIALS ===== */
+    .testimonials {
+      padding: 80px 20px;
+      background: var(--light);
+      text-align: center;
+    }
+    .testimonials h2 {
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+      color: var(--blue);
+    }
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    .testimonial {
+      background: #fff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+    .testimonial p {
+      font-style: italic;
+      margin-bottom: 15px;
+    }
+    .testimonial cite {
+      font-weight: bold;
+      color: var(--red);
+    }
+
+    /* ===== CTA ===== */
+    .cta {
+      padding: 80px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, var(--blue), var(--red));
+      color: #fff;
+    }
+    .cta h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+    .cta a {
+      background: #fff;
+      color: var(--blue);
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .cta a:hover {
+      background: var(--red);
+      color: #fff;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Why Choose <span>UFL Pakistan</span>?</h1>
+      <p>Global logistics expertise, unmatched reliability, and customer-focused solutions.</p>
+      <a href="#why" class="hero-btn">Discover More</a>
+    </div>
+  </section>
+
+  <!-- WHY CARDS -->
+  <section id="why" class="why">
+    <h2>Our <span>Strengths</span></h2>
+    <p class="section-subtitle">Experience logistics with confidence and global reach.</p>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon"><i class="fa-solid fa-globe"></i></div>
+        <h3>Global Network</h3>
+        <p>Connections in over 100+ countries for smooth operations worldwide.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fa-solid fa-plane"></i></div>
+        <h3>Air Freight Expertise</h3>
+        <p>Fast and reliable air cargo services for time-sensitive shipments.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fa-solid fa-ship"></i></div>
+        <h3>Ocean Freight</h3>
+        <p>Trusted partnerships with carriers for efficient sea logistics.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fa-solid fa-truck"></i></div>
+        <h3>Road Transport</h3>
+        <p>Strong domestic and cross-border trucking solutions.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fa-solid fa-warehouse"></i></div>
+        <h3>Warehousing</h3>
+        <p>Secure storage facilities with modern inventory systems.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><i class="fa-solid fa-handshake"></i></div>
+        <h3>Customer Commitment</h3>
+        <p>Dedicated support and tailor-made solutions for every client.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMAGE WITH TEXT -->
+  <section class="image-text">
+    <img src="./IMG/expert.jfif" alt="Warehouse">
+    <div>
+      <h2>Global Reach, Local Expertise</h2>
+      <p>At UFL, we combine global logistics capabilities with local knowledge to deliver efficient, cost-effective solutions tailored to your supply chain needs.</p>
+    </div>
+  </section>
+
+  <!-- COUNTERS -->
+  <section class="counters">
+    <div class="counter">
+      <i class="fa-solid fa-users"></i>
+      <h3>500+</h3>
+      <p>Happy Clients</p>
+    </div>
+    <div class="counter">
+      <i class="fa-solid fa-globe"></i>
+      <h3>100+</h3>
+      <p>Countries Served</p>
+    </div>
+    <div class="counter">
+      <i class="fa-solid fa-boxes-stacked"></i>
+      <h3>1M+</h3>
+      <p>Shipments Delivered</p>
+    </div>
+    <div class="counter">
+      <i class="fa-solid fa-handshake"></i>
+      <h3>50+</h3>
+      <p>Global Partners</p>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial">
+        <p>"UFL Pakistan has streamlined our supply chain and delivered consistently excellent service."</p>
+        <cite>- International Fashion Brand</cite>
+      </div>
+      <div class="testimonial">
+        <p>"Their air freight solutions saved us time and money. Truly professional."</p>
+        <cite>- Export Company</cite>
+      </div>
+      <div class="testimonial">
+        <p>"We rely on UFL for warehousing and distribution. Their team is reliable and supportive."</p>
+        <cite>- Logistics Partner</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Ready to Partner with UFL?</h2>
+    <p>Let us help you move your business forward with world-class logistics solutions.</p>
+    <a href="#">Contact Us Today</a>
+  </section>
+
+</body>
+</html>
