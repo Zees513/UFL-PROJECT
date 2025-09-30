@@ -155,7 +155,7 @@
       font-weight: 600;
       color: var(--blue);
       font-size: 1.2rem;
-      
+
     }
 
     .nav-links a:hover {
@@ -469,120 +469,178 @@
     }
 
     .counter {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .counter .num {
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--blue);
+      display: inline-block;
+    }
+
+    .counter .plus {
+      font-size: 2rem;
+      font-weight: bold;
+      color: var(--blue);
+      margin-left: 2px;
+    }
+
+.about-section {
+  padding: 70px 20px;
+  background: #f9fbfd;
 }
 
-.counter .num {
-  font-size: 2rem;
-  font-weight: bold;
-  color: var(--blue);
-  display: inline-block;
-}
-
-.counter .plus {
-  font-size: 2rem;
-  font-weight: bold;
-  color: var(--blue);
-  margin-left: 2px;
-}
-
-
-    /* Footer */
-   .footer {
-  position: relative;
-  background: linear-gradient(135deg, #001f3f 50%, #004080 50%);
-  color: #fff;
-  padding: 50px 20px;
-  overflow: hidden;
-}
-
-.footer::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: linear-gradient(-135deg, #001f3f 50%, transparent 50%);
-  opacity: 0.1; /* stylish effect */
-}
-
-.footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
   max-width: 1200px;
   margin: auto;
-  position: relative;
-  z-index: 1;
 }
 
-.footer-col {
-  flex: 1 1 250px;
-  margin: 20px;
-}
-/* Address Section */
-.footer .footer-col.address {
-  color: #ddd;
-  font-size: 15px;
-  line-height: 1.8;
-}
-
-.footer .footer-col.address p {
-  margin: 8px 0;
-  display: flex;
-  align-items: center;
-}
-
-.footer .footer-col.address i {
-  margin-right: 10px;
-  color: #1e90ff;
-  font-size: 16px;
-  width: 20px;   /* icons aligned properly */
+.about-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 40px 25px;
   text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.about-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
 
-.footer h3 {
+.card-icon {
+  font-size: 2.8rem;
+  color: #d90012;
   margin-bottom: 15px;
-  border-bottom: 2px solid #1e90ff;
-  display: inline-block;
 }
 
-.footer ul {
-  list-style: none;
-  padding: 0;
+.about-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #002a5c;
+  margin-bottom: 12px;
 }
 
-.footer ul li {
-  margin: 8px 0;
+.about-card p {
+  font-size: 1rem;
+  color: #475569;
+  line-height: 1.6;
 }
 
-.footer ul li a {
-  color: #ddd;
-  text-decoration: none;
-  transition: color 0.3s;
-}
+    /* Footer */
+    .footer {
+      position: relative;
+      background: linear-gradient(135deg, #001f3f 50%, #004080 50%);
+      color: #fff;
+      padding: 50px 20px;
+      overflow: hidden;
+    }
 
-.footer ul li a:hover {
-  color: #1e90ff;
-}
+    .footer::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(-135deg, #001f3f 50%, transparent 50%);
+      opacity: 0.1;
+      /* stylish effect */
+    }
 
-.social-icons a {
-  display: inline-block;
-  margin: 0 8px;
-  font-size: 22px;
-  color: #fff;
-  /* background: rgba(255, 255, 255, 0.1); */
-  padding: 5px;
-  border-radius: 50%;
-  transition: background 0.3s, color 0.3s;
-}
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+      position: relative;
+      z-index: 1;
+    }
 
-.social-icons a:hover {
-  background: #1e90ff;
-  color: #fff;
-}
+    .footer-logo img {
+      max-width: 180px;
+      /* apni requirement ke hisaab se size set karein */
+      height: auto;
+      display: block;
+    }
+
+
+    .footer-col {
+      flex: 1 1 250px;
+      margin: 20px;
+    }
+
+    /* Address Section */
+    .footer .footer-col.address {
+      color: #ddd;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .footer .footer-col.address p {
+      margin: 8px 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .footer .footer-col.address i {
+      margin-right: 10px;
+      color: #1e90ff;
+      font-size: 16px;
+      width: 20px;
+      /* icons aligned properly */
+      text-align: center;
+    }
+
+
+    .footer h3 {
+      margin-bottom: 15px;
+      border-bottom: 2px solid #1e90ff;
+      display: inline-block;
+    }
+
+    .footer ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer ul li {
+      margin: 8px 0;
+    }
+
+    .footer ul li a {
+      color: #ddd;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer ul li a:hover {
+      color: #1e90ff;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      margin: 0 8px;
+      font-size: 22px;
+      color: #fff;
+      /* background: rgba(255, 255, 255, 0.1); */
+      padding: 5px;
+      border-radius: 50%;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .social-icons a:hover {
+      background: #1e90ff;
+      color: #fff;
+    }
 
 
 
@@ -718,7 +776,8 @@
   <section id="why" class="container why">
     <div>
       <h2 style="color:var(--blue);margin-bottom:12px;font-size: 2.5rem;">Why Choose UFL Pakistan?</h2>
-      <p style="margin-bottom:18px;color:#374151;max-width:720px;font-size: 1.2rem;">We combine local expertise with global reach —
+      <p style="margin-bottom:18px;color:#374151;max-width:720px;font-size: 1.2rem;">We combine local expertise with
+        global reach —
         offering customizable, secure and trackable logistics services. Our team focuses on minimizing transit times and
         costs while ensuring compliance and customer satisfaction.</p>
 
@@ -815,79 +874,121 @@
     <h1 style="color:#002a5c ; text-align: center;align-items: center;font-size: 2.5rem;">Our Achievements</h1>
     <div class="counters">
       <div class="counter">
-  <div class="num-wrapper">
-    <div class="num" data-target="100" style="color: red;">0</div>
-    <span class="plus" style="color: red;">+</span>
-  </div>
-  <div class="lbl" style="font-weight: bold;">Global Partners</div>
-</div>
+        <div class="num-wrapper">
+          <div class="num" data-target="100" style="color: red;">0</div>
+          <span class="plus" style="color: red;">+</span>
+        </div>
+        <div class="lbl" style="font-weight: bold;">Global Partners</div>
+      </div>
 
 
       <div class="counter">
-  <div class="num-wrapper">
-    <div class="num" data-target="10000" style="color: red;">0</div>
-    <span class="plus" style="color: red;">+</span>
-  </div>
-  <div class="lbl"style="font-weight: bold;">Shipment Fulfilled</div>
-</div>
+        <div class="num-wrapper">
+          <div class="num" data-target="10000" style="color: red;">0</div>
+          <span class="plus" style="color: red;">+</span>
+        </div>
+        <div class="lbl" style="font-weight: bold;">Shipment Fulfilled</div>
+      </div>
 
       <div class="counter">
-  <div class="num-wrapper">
-    <div class="num" data-target="40" style="color: red;">0</div>
-    <span class="plus" style="color: red;">+</span>
-  </div>
-  <div class="lbl"style="font-weight: bold;">Countries Served</div>
-</div>
+        <div class="num-wrapper">
+          <div class="num" data-target="40" style="color: red;">0</div>
+          <span class="plus" style="color: red;">+</span>
+        </div>
+        <div class="lbl" style="font-weight: bold;">Countries Served</div>
+      </div>
 
 
       <div class="counter">
-  <div class="num-wrapper">
-    <div class="num" data-target="100" style="color: red;">0</div>
-    <span class="plus" style="color: red;">+</span>
-  </div>
-  <div class="lbl"style="font-weight: bold;">Satisfied Clients</div>
-</div>
+        <div class="num-wrapper">
+          <div class="num" data-target="100" style="color: red;">0</div>
+          <span class="plus" style="color: red;">+</span>
+        </div>
+        <div class="lbl" style="font-weight: bold;">Satisfied Clients</div>
+      </div>
 
     </div>
   </section>
-  
+
+<section class="about-section">
+  <h2 style="color: #001f3f;font-size: 2.5rem;text-align: center;position: relative;bottom: 20px;">Commitment to Excellence</h2>
+  <div class="about-cards">
+    <!-- Vision -->
+    <div class="about-card">
+      <i class="fas fa-eye card-icon"></i>
+      <h3 style="font-size: 1.5rem;">Vision</h3>
+      <p>Our vision is to be a trusted global logistics partner, setting new benchmarks in efficiency, sustainability, and customer satisfaction across industries.</p>
+    </div>
+
+    <!-- Mission -->
+    <div class="about-card">
+      <i class="fas fa-bullseye card-icon"></i>
+      <h3>Mission</h3>
+      <p>We aim to deliver reliable, cost-effective, and timely freight solutions by leveraging innovation, global networks, and customer-first strategies.</p>
+    </div>
+
+    <!-- Core Values -->
+    <div class="about-card">
+      <i class="fas fa-gem card-icon"></i>
+      <h3>Core Values</h3>
+      <p>Integrity, accountability, teamwork, and excellence define our culture. We believe in building trust and long-term partnerships with our clients.</p>
+    </div>
+
+    <!-- Guiding Principles -->
+    <div class="about-card">
+      <i class="fas fa-compass card-icon"></i>
+      <h3>Guiding Principles</h3>
+      <p>Our guiding principles are rooted in transparency, continuous improvement, and creating sustainable value for our customers and communities.</p>
+    </div>
+  </div>
+</section>
 
 
   <!-- Contact / Footer -->
- <footer class="footer" style="border-top: 5px solid red;">
-  <div class="footer-content">
-    <div class="footer-col">
-      <h3>About Us</h3>
-      <p>Delivering excellence in Road, Air & Sea freight solutions worldwide.</p>
-    </div>
-    <div class="footer-col">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./services.html">Services</a></li>
-        <li><a href="./why-ufl.html">About Us</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h3>Follow Us</h3>
-      <div class="social-icons">
-        <a href="https://www.facebook.com/uflpk"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.linkedin.com/company/86447862/admin/dashboard/"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://www.instagram.com/ufl_pk/?hl=en"><i class="fab fa-instagram"></i></a>
-        <a href="mailto:query@uflpk.com"><i class="fas fa-envelope"></i></a>
+  <footer class="footer">
+    <div class="footer-content">
+
+      <!-- Logo Column -->
+      <div class="footer-col footer-logo">
+        <img src="./IMG/ufl logo png.png" style="position: relative;bottom: 70px;" alt="Company Logo">
+        <p style="position: relative;bottom: 140px;color: red;">Don't Worry-We have Solutions!</p>
       </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col" style="position: relative;left: 60px;">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="./why-ufl.html">About Us</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Address -->
       <div class="footer-col">
-      <h3>Address</h3>
-      <p><i class="fas fa-map-marker-alt"></i> UFL PAKISTAN SMC PRIVATE LIMITED
-SUITE 1615, 16TH FLOOR, MUHAMMADI TRADE TOWER,
-SHAHRAH-E-LIAQUAT,NEW CHALLI, KARACHI-PAKISTAN</p>
-      <p><i class="fas fa-phone"></i> +92-21-32371057</p>
-      <p><i class="fas fa-envelope"></i> query@uflpk.com</p>
+        <h3>Address</h3>
+        <p> UFL PAKISTAN SMC PRIVATE LIMITED
+          SUITE 1615, 16TH FLOOR, MUHAMMADI TRADE TOWER,
+          SHAHRAH-E-LIAQUAT,NEW CHALLI, KARACHI-PAKISTAN</p>
+        <p>Phone: +92-21-32371057</p>
+        <p>Email: query@uflpk.com</p>
+      </div>
+
+      <!-- Social -->
+      <div class="footer-col">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/uflpk" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/company/86447862/admin/dashboard/" target="_blank"><i
+              class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/ufl_pk/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="mailto:query@uflpk.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+
     </div>
-    </div>
-  </div>
-</footer>
+  </footer>
 
 
 
