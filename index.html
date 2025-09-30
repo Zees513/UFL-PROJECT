@@ -42,61 +42,65 @@
 
     /* Top thin header */
     .topbar {
-    background: #002a5c;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 4px 18px; /* compact padding */
-    font-size: 0.9rem; /* slightly smaller text */
-    line-height: 1.4;
-    flex-wrap: wrap;
-  }
-
-  .topbar .contact-info {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-  }
-
-  .topbar .contact-info span {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-
-  /* Smaller icons */
-  .topbar i {
-    font-size: 0.85rem;
-  }
-
-  .topbar .social-icons {
-    display: flex;
-    gap: 8px;
-  }
-
-  .topbar .social-icons a {
-    /* color: #fff; */
-    font-size: 0.95rem;
-    transition: 0.3s;
-  }
-
-  .topbar .social-icons a:hover {
-    color: #ff4b5c;
-  }
-
-  /* Responsive */
-  @media (max-width: 600px) {
-    .topbar {
-      flex-direction: column;
-      text-align: center;
-      gap: 6px;
-      font-size: 0.80rem;
+      background: #002a5c;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4px 18px;
+      /* compact padding */
+      font-size: 0.9rem;
+      /* slightly smaller text */
+      line-height: 1.4;
+      flex-wrap: wrap;
     }
+
     .topbar .contact-info {
-      justify-content: center;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
     }
-  }
+
+    .topbar .contact-info span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Smaller icons */
+    .topbar i {
+      font-size: 0.85rem;
+    }
+
+    .topbar .social-icons {
+      display: flex;
+      gap: 8px;
+    }
+
+    .topbar .social-icons a {
+      /* color: #fff; */
+      font-size: 0.95rem;
+      transition: 0.3s;
+    }
+
+    .topbar .social-icons a:hover {
+      color: #ff4b5c;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .topbar {
+        flex-direction: column;
+        text-align: center;
+        gap: 6px;
+        font-size: 0.80rem;
+      }
+
+      .topbar .contact-info {
+        justify-content: center;
+      }
+    }
+
     /* Main header / nav */
     .header {
       background: var(--white);
@@ -116,25 +120,28 @@
     }
 
     .brand {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  height: 60px;
-}
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      height: 60px;
+    }
 
-.brand img {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%) scale(1.5); /* bara bhi aur center bhi */
-  height: 100px; /* base height same */
-}
+    .brand img {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%) scale(1.5);
+      /* bara bhi aur center bhi */
+      height: 100px;
+      /* base height same */
+    }
 
 
-.header .nav {
-  align-items: center; /* logo aur links same line mai rahenge */
-}
+    .header .nav {
+      align-items: center;
+      /* logo aur links same line mai rahenge */
+    }
 
     .nav-links {
       display: flex;
@@ -164,76 +171,147 @@
 
     /* Mobile */
     /* Mobile */
-.hamburger{display:none}
-@media (max-width:900px){
-  .nav-links{
-    display:none;
-    flex-direction:column;
-    gap:12px;
-    background:var(--white);
-    position:absolute;
-    top:100%;
-    right:0;
-    left:0;
-    padding:18px;
-    box-shadow:0 6px 18px rgba(0,0,0,0.1);
-  }
-  .nav-links a{
-    display:block;
-    text-align:left;
-    padding:10px;
-    border-radius:6px;
-  }
-  .nav-links a:hover{
-    background:var(--muted);
-  }
-  .hamburger{
-    display:block;
-    font-size:22px;
-    cursor:pointer;
-  }
-}
+    .hamburger {
+      display: none
+    }
+
+    @media (max-width:900px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 12px;
+        background: var(--white);
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        padding: 18px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav-links a {
+        display: block;
+        text-align: left;
+        padding: 10px;
+        border-radius: 6px;
+      }
+
+      .nav-links a:hover {
+        background: var(--muted);
+      }
+
+      .hamburger {
+        display: block;
+        font-size: 22px;
+        cursor: pointer;
+      }
+    }
 
 
     /* Hero Carousel */
-    .carousel { height: 72vh; min-height: 420px; position: relative; overflow: hidden; }
+    .carousel {
+      height: 72vh;
+      min-height: 420px;
+      position: relative;
+      overflow: hidden;
+    }
 
-  .slide { position: absolute; inset: 0; display:flex; align-items:center; justify-content:center; opacity:0; transition:opacity .6s ease; }
-  .slide.active { opacity: 1; z-index: 2; }
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity .6s ease;
+    }
 
-  /* media wrapper - keeps image full width/height */
-  .slide-media { position:absolute; inset:0; overflow:hidden; z-index:1; background:var(--blue); }
+    .slide.active {
+      opacity: 1;
+      z-index: 2;
+    }
 
-  /* FULL-WIDTH IMAGE */
-  .slide-media img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;   /* fills width/height, preserves aspect ratio (may crop) */
-    object-position: center center;
-    display: block;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    transform-origin: center;
-    transition: transform .6s ease;
-  }
+    /* media wrapper - keeps image full width/height */
+    .slide-media {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      z-index: 1;
+      background: var(--blue);
+    }
 
-  /* subtle zoom on active slide */
-  .slide.active .slide-media img { transform: scale(1.02); }
-  .slide:hover .slide-media img { transform: scale(1.05); }
+    /* FULL-WIDTH IMAGE */
+    .slide-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* fills width/height, preserves aspect ratio (may crop) */
+      object-position: center center;
+      display: block;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      transform-origin: center;
+      transition: transform .6s ease;
+    }
 
-  /* overlay and text layering */
-  .overlay { position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,42,92,0.55) 0%, rgba(0,0,0,0.32) 60%); z-index:2; pointer-events:none; }
-  .hero-inner { position:relative; z-index:3; color:#fff; text-align:center; padding:24px; }
+    /* subtle zoom on active slide */
+    .slide.active .slide-media img {
+      transform: scale(1.02);
+    }
 
-  /* dots */
-  .dots { position:absolute; left:50%; transform:translateX(-50%); bottom:14px; z-index:6; display:flex; gap:8px; }
-  .dots button { width:10px; height:10px; border-radius:50%; border:none; background:rgba(255,255,255,0.5); cursor:pointer; }
-  .dots button.active { background:var(--red); transform:scale(1.1); }
+    .slide:hover .slide-media img {
+      transform: scale(1.05);
+    }
 
-  /* smaller hero on phones */
-  @media (max-width: 768px) {
-    .carousel { height: 50vh; min-height: 300px; }
-  }
+    /* overlay and text layering */
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0, 42, 92, 0.55) 0%, rgba(0, 0, 0, 0.32) 60%);
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 3;
+      color: #fff;
+      text-align: center;
+      padding: 24px;
+    }
+
+    /* dots */
+    .dots {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 14px;
+      z-index: 6;
+      display: flex;
+      gap: 8px;
+    }
+
+    .dots button {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+    }
+
+    .dots button.active {
+      background: var(--red);
+      transform: scale(1.1);
+    }
+
+    /* smaller hero on phones */
+    @media (max-width: 768px) {
+      .carousel {
+        height: 50vh;
+        min-height: 300px;
+      }
+    }
 
     /* WhatsApp floating */
     .whatsapp {
@@ -288,7 +366,6 @@
     .why .card:hover {
       border-radius: 40px;
       transform: translateY(-8px)
-      
     }
 
     .why img {
@@ -325,8 +402,9 @@
       color: #f5f7fb;
       transform: translateY(-10px)
     }
-    .service:hover p{
-  color: white;
+
+    .service:hover p {
+      color: white;
     }
 
     .service .icon {
@@ -351,149 +429,157 @@
       font-weight: 700
     }
 
-    /* Partners & counters */
-    .partners {
-      padding: 40px 0
-    }
-
+    /* Partner Logos */
     .partner-logos {
       display: flex;
-      gap: 18px;
-      align-items: center;
+      flex-wrap: wrap;
       justify-content: center;
-      flex-wrap: wrap
+      gap: 25px;
     }
 
     .partner-logos img {
-      height: 56px;
-      opacity: 0.9;
-      filter: grayscale(20%);
-      transition: transform .2s, filter .2s
+      height: 90px;
+      /* logo size bada */
+      object-fit: contain;
+      transition: transform 0.3s;
     }
 
     .partner-logos img:hover {
-      transform: translateY(-6px);
-      filter: grayscale(0)
+      transform: scale(1.1);
+    }
+
+    /* Counters Section */
+    .counters-section {
+      background: #f8fafc;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 40px;
+      border-radius: 8px;
     }
 
     .counters {
       display: flex;
-      gap: 18px;
-      justify-content: center;
       flex-wrap: wrap;
-      margin-top: 18px
+      justify-content: center;
+      gap: 35px;
     }
 
     .counter {
-      background: var(--white);
-      padding: 16px 20px;
-      border-radius: 10px;
-      min-width: 150px;
-      text-align: center;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06)
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    .counter .num {
-      font-size: 26px;
-      font-weight: 800;
-      color: var(--red)
-    }
+.counter .num {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--blue);
+  display: inline-block;
+}
 
-    .counter .lbl {
-      color: var(--blue);
-      font-weight: 700;
-      margin-top: 6px
-    }
+.counter .plus {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--blue);
+  margin-left: 2px;
+}
+
 
     /* Footer */
-    .footer {
-  background: linear-gradient(135deg, #000428, #004e92);
+   .footer {
+  position: relative;
+  background: linear-gradient(135deg, #001f3f 50%, #004080 50%);
   color: #fff;
-  padding: 60px 20px 20px;
-  font-family: Arial, sans-serif;
+  padding: 50px 20px;
+  overflow: hidden;
 }
 
-.footer-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(-135deg, #001f3f 50%, transparent 50%);
+  opacity: 0.1; /* stylish effect */
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   max-width: 1200px;
   margin: auto;
-}
-
-.footer-brand img {
-  width: 120px;
-  margin-bottom: 15px;
-}
-
-.footer-brand p {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #ddd;
-}
-
-.footer-links h4,
-.footer-social h4 {
-  font-size: 18px;
-  margin-bottom: 15px;
   position: relative;
+  z-index: 1;
 }
 
-.footer-links h4::after,
-.footer-social h4::after {
-  content: '';
-  display: block;
-  width: 40px;
-  height: 3px;
-  background: #00aaff;
-  margin-top: 8px;
+.footer-col {
+  flex: 1 1 250px;
+  margin: 20px;
+}
+/* Address Section */
+.footer .footer-col.address {
+  color: #ddd;
+  font-size: 15px;
+  line-height: 1.8;
 }
 
-.footer-links ul {
+.footer .footer-col.address p {
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+}
+
+.footer .footer-col.address i {
+  margin-right: 10px;
+  color: #1e90ff;
+  font-size: 16px;
+  width: 20px;   /* icons aligned properly */
+  text-align: center;
+}
+
+
+.footer h3 {
+  margin-bottom: 15px;
+  border-bottom: 2px solid #1e90ff;
+  display: inline-block;
+}
+
+.footer ul {
   list-style: none;
   padding: 0;
 }
 
-.footer-links ul li {
-  margin-bottom: 10px;
+.footer ul li {
+  margin: 8px 0;
 }
 
-.footer-links ul li a {
+.footer ul li a {
+  color: #ddd;
   text-decoration: none;
-  color: #bbb;
   transition: color 0.3s;
 }
 
-.footer-links ul li a:hover {
-  color: #00aaff;
+.footer ul li a:hover {
+  color: #1e90ff;
 }
 
 .social-icons a {
   display: inline-block;
-  width: 38px;
-  height: 38px;
-  line-height: 38px;
-  border-radius: 50%;
-  text-align: center;
-  background: rgba(255, 255, 255, 0.1);
+  margin: 0 8px;
+  font-size: 18px;
   color: #fff;
-  margin-right: 10px;
-  transition: 0.3s;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 50%;
+  transition: background 0.3s, color 0.3s;
 }
 
 .social-icons a:hover {
-  background: #00aaff;
-  transform: translateY(-4px);
+  background: #1e90ff;
+  color: #fff;
 }
 
-.footer-bottom {
-  text-align: center;
-  margin-top: 40px;
-  border-top: 1px solid rgba(255,255,255,0.2);
-  padding-top: 15px;
-  font-size: 14px;
-  color: #aaa;
-}
 
 
     /* small screens */
@@ -518,25 +604,24 @@
 
   <!-- Topbar with social icons and small contact -->
   <div class="topbar">
-  <div class="contact-info">
-    <span><i class="fa-solid fa-phone"></i> +92-21-111-835-111</span>
-    <span><i class="fa-solid fa-envelope"></i> info@uflpakistan.com</span>
+    <div class="contact-info">
+      <span><i class="fa-solid fa-phone"></i> +92-21-111-835-111</span>
+      <span><i class="fa-solid fa-envelope"></i> info@uflpakistan.com</span>
+    </div>
+    <div class="social-icons">
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#"><i class="fa-solid fa-envelope"></i></a>
+    </div>
   </div>
-  <div class="social-icons">
-    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-    <a href="#"><i class="fa-solid fa-envelope"></i></a>
-  </div>
-</div>
 
 
   <!-- Main navigation -->
   <header class="header">
     <div class="nav">
       <div class="brand">
-        <img src="./IMG/ufl logo png.png" alt="UFL Pakistan"
-          onerror="this.style.display='none'">
+        <img src="./IMG/ufl logo png.png" alt="UFL Pakistan" onerror="this.style.display='none'">
       </div>
 
       <nav class="nav-links" aria-label="Main Navigation">
@@ -554,79 +639,74 @@
 
   <!-- HERO with 5 slides -->
   <section id="home" class="hero">
-  <div class="carousel" id="carousel" data-fit="cover">
-    <!-- Slide 1 -->
-    <div class="slide">
-      <div class="slide-media">
-        <img src="./IMG/one.jfif"
-             alt="Global Logistics — Sea" />
-      </div>
-      <div class="overlay"></div>
-      <div class="hero-inner animate__animated animate__fadeInUp">
-        <h1 class="animate__animated animate__fadeInDown">Global Freight Forwarding — Sea, Air & Road</h1>
-        <p>Reliable transit, clear tracking, and tailored solutions for your business.</p>
-        <div class="actions">
-          <a class="btn btn-primary" href="#services">Explore Services</a>
-          <a class="btn btn-outline" href="#contact">Get a Quote</a>
+    <div class="carousel" id="carousel" data-fit="cover">
+      <!-- Slide 1 -->
+      <div class="slide">
+        <div class="slide-media">
+          <img src="./IMG/one.jfif" alt="Global Logistics — Sea" />
+        </div>
+        <div class="overlay"></div>
+        <div class="hero-inner animate__animated animate__fadeInUp">
+          <h1 class="animate__animated animate__fadeInDown">Global Freight Forwarding — Sea, Air & Road</h1>
+          <p>Reliable transit, clear tracking, and tailored solutions for your business.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#services">Explore Services</a>
+            <a class="btn btn-outline" href="#contact">Get a Quote</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Slide 2 -->
-    <div class="slide">
-      <div class="slide-media">
-        <img src="./IMG/chain.jfif"
-             alt="Supply Chain" />
+      <!-- Slide 2 -->
+      <div class="slide">
+        <div class="slide-media">
+          <img src="./IMG/chain.jfif" alt="Supply Chain" />
+        </div>
+        <div class="overlay"></div>
+        <div class="hero-inner animate__animated animate__fadeInUp">
+          <h1>End-to-End Supply Chain Management</h1>
+          <p>Optimized warehousing and distribution across the globe.</p>
+        </div>
       </div>
-      <div class="overlay"></div>
-      <div class="hero-inner animate__animated animate__fadeInUp">
-        <h1>End-to-End Supply Chain Management</h1>
-        <p>Optimized warehousing and distribution across the globe.</p>
-      </div>
-    </div>
 
-    <!-- Slide 3 -->
-    <div class="slide">
-      <div class="slide-media">
-        <img src="./IMG/air frieght.jfif"
-             alt="Air Freight" />
+      <!-- Slide 3 -->
+      <div class="slide">
+        <div class="slide-media">
+          <img src="./IMG/air frieght.jfif" alt="Air Freight" />
+        </div>
+        <div class="overlay"></div>
+        <div class="hero-inner animate__animated animate__fadeInUp">
+          <h1>Rapid Air Freight for Time-Sensitive Cargo</h1>
+          <p>Priority handling, customs clearance and tracking.</p>
+        </div>
       </div>
-      <div class="overlay"></div>
-      <div class="hero-inner animate__animated animate__fadeInUp">
-        <h1>Rapid Air Freight for Time-Sensitive Cargo</h1>
-        <p>Priority handling, customs clearance and tracking.</p>
-      </div>
-    </div>
 
-    <!-- Slide 4 -->
-    <div class="slide">
-      <div class="slide-media">
-        <img src="./IMG/ocean.jfif"
-             alt="Ocean Freight" />
+      <!-- Slide 4 -->
+      <div class="slide">
+        <div class="slide-media">
+          <img src="./IMG/ocean.jfif" alt="Ocean Freight" />
+        </div>
+        <div class="overlay"></div>
+        <div class="hero-inner animate__animated animate__fadeInUp">
+          <h1>Reliable Ocean Freight — Competitive Rates</h1>
+          <p>Consolidation, FCL/LCL and global carrier relationships.</p>
+        </div>
       </div>
-      <div class="overlay"></div>
-      <div class="hero-inner animate__animated animate__fadeInUp">
-        <h1>Reliable Ocean Freight — Competitive Rates</h1>
-        <p>Consolidation, FCL/LCL and global carrier relationships.</p>
-      </div>
-    </div>
 
-    <!-- Slide 5 -->
-    <div class="slide">
-      <div class="slide-media">
-        <img src="./IMG/lift.jfif"
-             alt="Project Forwarding" />
+      <!-- Slide 5 -->
+      <div class="slide">
+        <div class="slide-media">
+          <img src="./IMG/lift.jfif" alt="Project Forwarding" />
+        </div>
+        <div class="overlay"></div>
+        <div class="hero-inner animate__animated animate__fadeInUp">
+          <h1>Project Forwarding & Heavy-Lift Solutions</h1>
+          <p>Handling specialized cargo with safety and compliance at core.</p>
+        </div>
       </div>
-      <div class="overlay"></div>
-      <div class="hero-inner animate__animated animate__fadeInUp">
-        <h1>Project Forwarding & Heavy-Lift Solutions</h1>
-        <p>Handling specialized cargo with safety and compliance at core.</p>
-      </div>
-    </div>
 
-    <div class="dots" id="dots"></div>
-  </div>
-</section>
+      <div class="dots" id="dots"></div>
+    </div>
+  </section>
 
   <!-- Why choose us -->
   <section id="why" class="container why">
@@ -654,8 +734,7 @@
     </div>
 
     <div>
-      <img src="./IMG/luggage.jfif"
-        alt="Why UFL — logistics" class="animate__animated animate__zoomIn" />
+      <img src="./IMG/luggage.jfif" alt="Why UFL — logistics" class="animate__animated animate__zoomIn" />
     </div>
   </section>
 
@@ -709,82 +788,102 @@
     </div>
   </section>
 
-  <!-- Partners and counters -->
+  <!-- Partners  -->
   <section id="partners" class="partners container">
     <h2 style="text-align:center;color:var(--blue);">Our Partners & Reach</h2>
-    <p style="text-align:center;color:#475569;margin-bottom:18px">We work with international carriers and trusted local
-      partners to deliver end-to-end solutions.</p>
+    <p style="text-align:center;color:#475569;margin-bottom:18px">
+      We work with international carriers and trusted local partners to deliver end-to-end solutions.
+    </p>
 
     <div class="partner-logos">
-      <img src="./IMG/p1.jfif" alt="partner1">
-      <img src="./IMG/p2.jfif" alt="partner2">
-      <img src="./IMG/p3.jfif" alt="partner3">
-      <img src="./IMG/p4.jfif" alt="partner4">
-      <img src="./IMG/p5.jfif" alt="partner5">
-      <img src="./IMG/p6.jfif" alt="partner6">
+      <img src="./IMG/mm chamber.jfif" alt="partner1">
+      <img src="./IMG/mm piffa.jfif" alt="partner2">
+      <img src="./IMG/mm shipping.jfif" alt="partner3">
+      <img src="./IMG/mm wca world.jfif" alt="partner4">
+      <img src="./IMG/h3.jpeg" alt="partner5">
+      <img src="./IMG/h4.jpeg" alt="partner6">
     </div>
+  </section>
+  <!-- counters -->
+  <section id="counters" class="counters-section container">
+    <h1 style="color:#002a5c ; text-align: center;align-items: center;">Our Achievements</h1>
+    <div class="counters">
+      <div class="counter">
+  <div class="num-wrapper">
+    <div class="num" data-target="100" style="color: red;">0</div>
+    <span class="plus" style="color: red;">+</span>
+  </div>
+  <div class="lbl" style="font-weight: bold;">Global Partners</div>
+</div>
 
-    <div class="counters" style="margin-top:22px">
+
       <div class="counter">
-        <div class="num" data-target="320">0</div>
-        <div class="lbl">Global Partners</div>
-      </div>
+  <div class="num-wrapper">
+    <div class="num" data-target="10000" style="color: red;">0</div>
+    <span class="plus" style="color: red;">+</span>
+  </div>
+  <div class="lbl"style="font-weight: bold;">Shipment Fulfilled</div>
+</div>
+
       <div class="counter">
-        <div class="num" data-target="12500">0</div>
-        <div class="lbl">Shipments / Year</div>
-      </div>
+  <div class="num-wrapper">
+    <div class="num" data-target="40" style="color: red;">0</div>
+    <span class="plus" style="color: red;">+</span>
+  </div>
+  <div class="lbl"style="font-weight: bold;">Countries Served</div>
+</div>
+
+
       <div class="counter">
-        <div class="num" data-target="75">0</div>
-        <div class="lbl">Countries Served</div>
-      </div>
-      <div class="counter">
-        <div class="num" data-target="9800">0</div>
-        <div class="lbl">Satisfied Clients</div>
-      </div>
+  <div class="num-wrapper">
+    <div class="num" data-target="100" style="color: red;">0</div>
+    <span class="plus" style="color: red;">+</span>
+  </div>
+  <div class="lbl"style="font-weight: bold;">Satisfied Clients</div>
+</div>
+
     </div>
   </section>
 
-  <!-- Contact / Footer -->
-  <!-- Footer -->
-<footer class="footer">
-  <div class="footer-container">
-    <!-- Brand -->
-    <div class="footer-brand">
-      <img src="./IMG/ufl logo png.png" alt="Logo">
-      <p>UFL Logistics — Delivering excellence in Road, Air & Sea freight solutions.</p>
-    </div>
 
-    <!-- Quick Links -->
-    <div class="footer-links">
-      <h4>Quick Links</h4>
+  <!-- Contact / Footer -->
+ <footer class="footer">
+  <div class="footer-content">
+    <div class="footer-col">
+      <h3>About Us</h3>
+      <p>Delivering excellence in Road, Air & Sea freight solutions worldwide.</p>
+    </div>
+    <div class="footer-col">
+      <h3>Quick Links</h3>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="why-ufl.html">About Us</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
     </div>
-
-    <!-- Social -->
-    <div class="footer-social">
-      <h4>Follow Us</h4>
+    <div class="footer-col">
+      <h3>Follow Us</h3>
       <div class="social-icons">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fa-solid fa-envelope"></i></a>
         <a href="#"><i class="fab fa-linkedin-in"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fas fa-envelope"></i></a>
       </div>
+      <div class="footer-col">
+      <h3>Address</h3>
+      <p><i class="fas fa-map-marker-alt"></i> 123 Logistics Street, Karachi, Pakistan</p>
+      <p><i class="fas fa-phone"></i> +92 300 1234567</p>
+      <p><i class="fas fa-envelope"></i> support@logistics.com</p>
     </div>
-  </div>
-
-  <!-- Bottom -->
-  <div class="footer-bottom">
-    <p>© 2025 UFL Logistics. All Rights Reserved.</p>
+    </div>
   </div>
 </footer>
 
-<!-- FontAwesome for icons -->
-<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
+
+  <!-- FontAwesome for icons -->
+  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 
   <!-- WhatsApp clickable floating -->
   <div class="whatsapp" title="Chat on WhatsApp">
@@ -827,15 +926,15 @@
     })();
 
     // Mobile toggle
-    function toggleMobile(){
-  const nav = document.querySelector('.nav-links');
-  if(nav.style.display === 'flex'){
-    nav.style.display = 'none';
-  } else {
-    nav.style.display = 'flex';
-    nav.style.flexDirection = 'column';
-  }
-}
+    function toggleMobile() {
+      const nav = document.querySelector('.nav-links');
+      if (nav.style.display === 'flex') {
+        nav.style.display = 'none';
+      } else {
+        nav.style.display = 'flex';
+        nav.style.flexDirection = 'column';
+      }
+    }
 
 
     // Counters — animate when visible
