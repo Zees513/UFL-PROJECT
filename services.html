@@ -90,6 +90,91 @@
       .modal-content{padding:14px}
       .modal-content h3{font-size:18px}
     }
+/* ✅ Universal Responsiveness */
+
+/* Container always adapts */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* Images always fit */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Text adjusts */
+h1, h2, h3, h4, h5, h6, p, span {
+  word-wrap: break-word;
+  line-height: 1.4;
+}
+
+/* Buttons adapt */
+button, .btn {
+  flex-shrink: 0;
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+/* Grid auto responsive */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Modal full responsive */
+.modal-content {
+  max-width: 90%;
+  width: 100%;
+  margin: auto;
+}
+.modal-media {
+  height: auto;
+  max-height: 300px;
+}
+
+/* Tabs auto-wrap */
+.tabs {
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.tab {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+/* Forms responsive */
+form input, form textarea, form select {
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+}
+
+/* Footer responsive */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+.footer-brand img {
+  margin: auto;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .header, .controls {
+    flex-direction: column;
+    text-align: center;
+  }
+  .modal-grid {
+    display: block;
+  }
+}
 
     
 
