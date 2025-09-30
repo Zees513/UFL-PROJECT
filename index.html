@@ -51,7 +51,7 @@
       /* compact padding */
       font-size: 0.9rem;
       /* slightly smaller text */
-      line-height: 1.4;
+      line-height: 1.1;
       flex-wrap: wrap;
     }
 
@@ -74,7 +74,7 @@
 
     .topbar .social-icons {
       display: flex;
-      gap: 8px;
+      /* gap: 4px; */
     }
 
     .topbar .social-icons a {
@@ -153,7 +153,9 @@
       padding: 8px 12px;
       border-radius: 6px;
       font-weight: 600;
-      color: var(--blue)
+      color: var(--blue);
+      font-size: 1.2rem;
+      
     }
 
     .nav-links a:hover {
@@ -162,7 +164,7 @@
     }
 
     .cta {
-      background: var(--red);
+      background: #D51820;
       color: var(--white);
       padding: 10px 16px;
       border-radius: 8px;
@@ -278,6 +280,8 @@
       color: #fff;
       text-align: center;
       padding: 24px;
+      font-weight: bold;
+      font-size: 1.3rem;
     }
 
     /* dots */
@@ -567,10 +571,10 @@
 .social-icons a {
   display: inline-block;
   margin: 0 8px;
-  font-size: 18px;
+  font-size: 22px;
   color: #fff;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 10px;
+  /* background: rgba(255, 255, 255, 0.1); */
+  padding: 5px;
   border-radius: 50%;
   transition: background 0.3s, color 0.3s;
 }
@@ -605,8 +609,8 @@
   <!-- Topbar with social icons and small contact -->
   <div class="topbar">
     <div class="contact-info">
-      <span><i class="fa-solid fa-phone"></i> +92-21-111-835-111</span>
-      <span><i class="fa-solid fa-envelope"></i> info@uflpakistan.com</span>
+      <span><i class="fa-solid fa-phone"></i> +92-21-32371057</span>
+      <span><i class="fa-solid fa-envelope"></i> query@uflpk.com</span>
     </div>
     <div class="social-icons">
       <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
@@ -638,7 +642,7 @@
   </header>
 
   <!-- HERO with 5 slides -->
-  <section id="home" class="hero">
+  <section id="home" class="hero" style="border-top: 7px solid #D51820;">
     <div class="carousel" id="carousel" data-fit="cover">
       <!-- Slide 1 -->
       <div class="slide">
@@ -711,8 +715,8 @@
   <!-- Why choose us -->
   <section id="why" class="container why">
     <div>
-      <h2 style="color:var(--blue);margin-bottom:12px">Why Choose UFL Pakistan?</h2>
-      <p style="margin-bottom:18px;color:#374151;max-width:720px">We combine local expertise with global reach —
+      <h2 style="color:var(--blue);margin-bottom:12px;font-size: 2.5rem;">Why Choose UFL Pakistan?</h2>
+      <p style="margin-bottom:18px;color:#374151;max-width:720px;font-size: 1.2rem;">We combine local expertise with global reach —
         offering customizable, secure and trackable logistics services. Our team focuses on minimizing transit times and
         costs while ensuring compliance and customer satisfaction.</p>
 
@@ -740,7 +744,7 @@
 
   <!-- Services (6 cards) -->
   <section id="services" class="services container">
-    <h2 style="text-align:center;color:var(--blue);margin-bottom:22px">Our Core Services</h2>
+    <h2 style="text-align:center;color:var(--blue);margin-bottom:22px;font-size: 2.5rem;">Services Offered</h2>
     <div class="services-grid">
 
       <div class="service animate__animated animate__fadeInUp">
@@ -790,23 +794,23 @@
 
   <!-- Partners  -->
   <section id="partners" class="partners container">
-    <h2 style="text-align:center;color:var(--blue);">Our Partners & Reach</h2>
+    <h2 style="text-align:center;color:var(--blue);font-size: 2.5rem;">Our Memberships:</h2>
     <p style="text-align:center;color:#475569;margin-bottom:18px">
       We work with international carriers and trusted local partners to deliver end-to-end solutions.
     </p>
 
     <div class="partner-logos">
-      <img src="./IMG/mm chamber.jfif" alt="partner1">
+      <img src="./IMG/mm wca world.jfif" alt="partner4">
       <img src="./IMG/mm piffa.jfif" alt="partner2">
       <img src="./IMG/mm shipping.jfif" alt="partner3">
-      <img src="./IMG/mm wca world.jfif" alt="partner4">
       <img src="./IMG/h3.jpeg" alt="partner5">
+      <img src="./IMG/mm chamber.jfif" alt="partner1">
       <img src="./IMG/h4.jpeg" alt="partner6">
     </div>
   </section>
   <!-- counters -->
   <section id="counters" class="counters-section container">
-    <h1 style="color:#002a5c ; text-align: center;align-items: center;">Our Achievements</h1>
+    <h1 style="color:#002a5c ; text-align: center;align-items: center;font-size: 2.5rem;">Our Achievements</h1>
     <div class="counters">
       <div class="counter">
   <div class="num-wrapper">
@@ -844,10 +848,65 @@
 
     </div>
   </section>
+  <!-- feedback -->
+ <section class="feedback-section">
+  <h2>What Our Clients Say</h2>
+  <p class="subtitle">Trusted by businesses and individuals worldwide</p>
+
+  <div class="feedback-grid">
+    <div class="feedback-card">
+      <img src="https://i.pravatar.cc/100?img=1" alt="client1">
+      <h3>John Smith</h3>
+      <p class="role">CEO, Global Logistics</p>
+      <p>"Excellent service! Shipments always arrive on time. Highly recommend."</p>
+      <div class="stars">★★★★★</div>
+    </div>
+
+    <div class="feedback-card">
+      <img src="https://i.pravatar.cc/100?img=2" alt="client2">
+      <h3>Sophia Lee</h3>
+      <p class="role">Manager, OceanTrade</p>
+      <p>"Professional team and smooth communication throughout the process."</p>
+      <div class="stars">★★★★☆</div>
+    </div>
+
+    <div class="feedback-card">
+      <img src="https://i.pravatar.cc/100?img=3" alt="client3">
+      <h3>Ali Khan</h3>
+      <p class="role">Director, SpeedAir</p>
+      <p>"Air freight service was fast and efficient. Great experience!"</p>
+      <div class="stars">★★★★★</div>
+    </div>
+
+    <div class="feedback-card">
+      <img src="https://i.pravatar.cc/100?img=4" alt="client4">
+      <h3>Maria Gomez</h3>
+      <p class="role">Entrepreneur</p>
+      <p>"Affordable pricing and reliable shipping. I will work with them again."</p>
+      <div class="stars">★★★★☆</div>
+    </div>
+
+    <div class="feedback-card">
+      <img src="https://i.pravatar.cc/100?img=5" alt="client5">
+      <h3>David Chen</h3>
+      <p class="role">Logistics Partner</p>
+      <p>"Worldwide reach and excellent customer support. Impressive!"</p>
+      <div class="stars">★★★★★</div>
+    </div>
+
+    <div class="feedback-card">
+      <img src="https://i.pravatar.cc/100?img=6" alt="client6">
+      <h3>Emma Watson</h3>
+      <p class="role">Freelancer</p>
+      <p>"Smooth process and hassle-free experience. Loved it!"</p>
+      <div class="stars">★★★★★</div>
+    </div>
+  </div>
+</section>
 
 
   <!-- Contact / Footer -->
- <footer class="footer">
+ <footer class="footer" style="border-top: 5px solid red;">
   <div class="footer-content">
     <div class="footer-col">
       <h3>About Us</h3>
@@ -856,10 +915,10 @@
     <div class="footer-col">
       <h3>Quick Links</h3>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./services.html">Services</a></li>
+        <li><a href="./why-ufl.html">About Us</a></li>
+        <li><a href="./contact.html">Contact</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -872,9 +931,11 @@
       </div>
       <div class="footer-col">
       <h3>Address</h3>
-      <p><i class="fas fa-map-marker-alt"></i> 123 Logistics Street, Karachi, Pakistan</p>
-      <p><i class="fas fa-phone"></i> +92 300 1234567</p>
-      <p><i class="fas fa-envelope"></i> support@logistics.com</p>
+      <p><i class="fas fa-map-marker-alt"></i> UFL PAKISTAN SMC PRIVATE LIMITED
+SUITE 1615, 16TH FLOOR, MUHAMMADI TRADE TOWER,
+SHAHRAH-E-LIAQUAT,NEW CHALLI, KARACHI-PAKISTAN</p>
+      <p><i class="fas fa-phone"></i> +92-21-32371057</p>
+      <p><i class="fas fa-envelope"></i> query@uflpk.com</p>
     </div>
     </div>
   </div>
