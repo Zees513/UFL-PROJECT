@@ -4,235 +4,291 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - UFL Pakistan</title>
+  <title>About Us - Modern Logistics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
+    /* Global Styles */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, sans-serif;
-      background: #f9fbfd;
-      color: #333;
+      background-color: #fff;
+      color: #003399;
       line-height: 1.6;
-      overflow-x: hidden;
     }
 
-    h2 {
-      font-size: 2rem;
-      color: #002a5c;
-      margin-bottom: 20px;
-      text-align: center;
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
-    p {
-      line-height: 1.7;
-    }
-
-    .section {
-      padding: 60px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    /* Hero */
-    .hero-bg {
+    h1{
       position: relative;
-      background: url('./IMG/about1.jfif') no-repeat center center/cover;
-      height: 80vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      left: 50px;
+    }
+    h2,
+    h3,
+    h4 {
+      color: #003399;
     }
 
-    .hero-bg .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 42, 92, 0.6);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 0 20px;
-    }
-
-    .hero-bg .hero-content {
-      color: #fff;
-      max-width: 800px;
-    }
-
-    .hero-bg h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
-
-    .hero-bg h1 span {
-      color: #d90012;
-    }
-
-    .hero-bg p {
-      font-size: 1.2rem;
-      line-height: 1.7;
-    }
-
-    @media(max-width:768px) {
-      .hero-bg h1 {
-        font-size: 2rem;
-      }
-
-      .hero-bg p {
-        font-size: 1rem;
-      }
-    }
-
-    /* About */
-    .about-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .about-content img {
-      width: 100%;
-      max-width: 450px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      margin: auto;
+    img {
+      max-width: 100%;
       display: block;
     }
 
-    @media(max-width:768px) {
-      .about-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 0;
     }
 
-    /* CEO */
-    .ceo {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 30px;
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
       align-items: center;
+      justify-content: space-between;
+      background: #f7f7f7;
+      padding: 80px 0;
     }
 
-    .ceo img {
-      width: 100%;
-      border-radius: 50%;
-      max-width: 280px;
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    .hero-text {
+      flex: 1 1 500px;
+      text-align: left;
     }
 
-    .ceo h3 {
-      color: #d90012;
-      font-size: 1.6rem;
-      margin-bottom: 10px;
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
     }
 
-    @media(max-width:768px) {
-      .ceo {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-
-      .ceo img {
-        margin: auto;
-      }
-    }
-
-    /* Success Story */
-    .success {
-      background: linear-gradient(135deg, #002a5c, #004080);
-      color: #fff;
-      border-radius: 16px;
-      padding: 50px;
-      text-align: center;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    }
-
-    .success h2 {
-      color: #fff;
-      margin-bottom: 15px;
-    }
-
-    .success p {
-      color: #f0f0f0;
-      font-size: 1.05rem;
-    }
-
-    /* History Timeline */
-    .timeline {
-      position: relative;
-      margin: 50px auto;
-      padding-left: 30px;
-      border-left: 3px solid #d90012;
-      max-width: 900px;
-    }
-
-    .timeline div {
+    .hero-text p {
+      font-size: 1.2rem;
       margin-bottom: 30px;
       position: relative;
-      padding-left: 20px;
+      left: 10px;
     }
 
-    .timeline div::before {
-      content: "";
-      position: absolute;
-      left: -12px;
-      top: 5px;
-      width: 20px;
-      height: 20px;
-      background: #d90012;
-      border: 3px solid #fff;
-      box-shadow: 0 0 0 3px #d90012;
-      border-radius: 50%;
+    .hero-text button {
+      padding: 15px 30px;
+      font-size: 1rem;
+      background: #ff3b3f;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+      display: block;
+      margin: 0 auto;
     }
 
-    .timeline h4 {
-      color: #002a5c;
-      margin: 0 0 8px;
-      font-size: 1.2rem;
+    .hero-text button:hover {
+      background: #e23337;
     }
 
-    .timeline p {
-      color: #444;
-      margin: 0;
-      font-size: 0.95rem;
+    .hero-image {
+      flex: 1 1 500px;
+      text-align: center;
+      margin-right: 20px;
     }
 
-    .timeline div:hover {
-      background: #f1f5fa;
-      border-radius: 8px;
-      padding: 15px;
+    .hero-image img {
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     }
 
-    /* Membership Logos */
-    .members {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 30px;
+    /* About Company */
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
       align-items: center;
-      justify-items: center;
-      margin-top: 30px;
+      margin-bottom: 80px;
     }
 
-    .members img {
-      max-width: 150px;
-      filter: grayscale(100%);
+    .about-text {
+      flex: 1 1 500px;
+    }
+
+    .about-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      font-size: 1.1rem;
+    }
+
+    .about-images {
+      flex: 1 1 500px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .about-images img {
+      width: 100%;
+      border-radius: 10px;
       transition: 0.3s;
     }
 
-    .members img:hover {
-      filter: grayscale(0%);
+    .about-images img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Cards Sections (Mission & Vision + Why Choose Us) */
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 80px;
+    }
+
+    .card {
+      flex: 1 1 280px;
+      background: linear-gradient(135deg, #003399, #ff3b3f);
+      color: white;
+      padding: 40px 20px;
+      border-radius: 15px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .card h3 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #f1f1f1;
+    }
+
+    /* Core Values */
+    .values {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 80px;
+    }
+
+    .value {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: #f7f7f7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .value:hover {
+      box-shadow: 0 0 25px #003399;
       transform: scale(1.1);
+    }
+
+    .value i {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #003399;
+    }
+
+    .value span {
+      font-weight: 600;
+      text-align: center;
+    }
+
+    /* Final CTA */
+    .cta {
+      background: #003399;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 90%);
+    }
+
+    .cta h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: white;
+    }
+
+    .cta button {
+      padding: 20px 40px;
+      font-size: 1.2rem;
+      background: #ff3b3f;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .cta button:hover {
+      background: #e23337;
+    }
+
+    /* Responsive */
+    @media(max-width:1024px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 0;
+      }
+
+      .hero-text,
+      .hero-image {
+        flex: 1 1 100%;
+      }
+
+      .hero-text h1 {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media(max-width:768px) {
+      .about {
+        flex-direction: column;
+      }
+
+      .about-images {
+        grid-template-columns: 1fr;
+      }
+
+      .cards {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .values {
+        gap: 20px;
+      }
+
+      .hero-text h1 {
+        font-size: 2rem;
+      }
+
+      .hero-text p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
@@ -240,102 +296,72 @@
 <body>
 
   <!-- Hero Section -->
-  <section class="hero-bg">
-    <div class="overlay">
-      <div class="hero-content">
-        <h1>About <span>UFL Pakistan</span></h1>
-        <p>Delivering excellence in logistics since 2012 with a strong global network,
-          customer-first solutions, and trusted partnerships worldwide.</p>
-      </div>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>We Move The World</h1>
+      <p>Your trusted logistics partner, delivering excellence across air, sea, and road transport.</p>
+      <button>Get Started</button>
+    </div>
+    <div class="hero-image">
+      <img src="./IMG/move.jfif" alt="Logistics">
     </div>
   </section>
 
   <!-- About Company -->
-  <section class="section">
-    <div class="about-content">
-      <div>
-        <h2>Who We Are</h2>
-        <p>UFL Pakistan is a leading logistics and freight forwarding company committed to simplifying supply chains
-          with cost-effective and reliable solutions. We specialize in air, sea, road, warehousing, and project
-          forwarding, serving diverse industries with excellence.</p>
-        <p>With global partnerships and decades of expertise, we ensure security, efficiency, and innovation in every
-          shipment.</p>
-      </div>
-      <img src="./IMG/one.jfif" alt="UFL Pakistan Office">
+  <section class="container about">
+    <div class="about-text">
+      <h2>About Our Company</h2>
+      <p>We specialize in providing top-notch logistics solutions worldwide. With years of experience and a committed
+        team, we ensure your goods reach their destination safely, on time, and efficiently.</p>
+    </div>
+    <div class="about-images">
+      <img src="./IMG/ab 1.jfif" alt="Company Image 1">
+      <img src="./IMG/ab 2.jfif" alt="Company Image 2">
+      <img src="./IMG/ab 3.jfif" alt="Company Image 3">
+      <img src="./IMG/ab 4.jfif" alt="Company Image 4">
     </div>
   </section>
 
-  <!-- CEO Profile -->
-  <section class="section">
-    <h2>Our Leadership</h2>
-    <div class="ceo">
-      <img src="https://img.freepik.com/premium-photo/portrait-employee-mature-man-boardroom-smile-ceo-corporate-auditor-office-bookkeeper-person-table-business-meeting-collaboration-with-planning-project-growth_590464-354399.jpg?semt=ais_hybrid&w=740&q=80" alt="CEO - UFL Pakistan">
-      <div>
-        <h3>Mr. Furqan Hussain — CEO</h3>
-        <p>Under the visionary leadership of Mr. Furqan Hussain, UFL Pakistan has grown into a trusted logistics partner
-          for global businesses. With over 13 years of experience in freight forwarding, he has transformed the
-          company with innovation, integrity, and a customer-first approach. His focus on building strong
-          partnerships and delivering sustainable logistics ensures UFL stays ahead in the industry.</p>
-      </div>
+  <!-- Mission & Vision -->
+  <section class="container cards">
+    <div class="card">
+      <h3>Our Mission</h3>
+      <p>To provide seamless logistics services that empower businesses globally.</p>
+    </div>
+    <div class="card">
+      <h3>Our Vision</h3>
+      <p>To be the world's most reliable and innovative logistics partner.</p>
     </div>
   </section>
 
-  <!-- Success Story -->
-  <section class="section">
-    <div class="success">
-      <h2>Our Success Story</h2>
-      <p>From humble beginnings to becoming a global logistics player, UFL Pakistan has successfully handled
-        thousands of shipments across continents. Our success is built on innovation, trust, and consistent
-        service excellence, making us the logistics partner of choice for businesses worldwide.</p>
+  <!-- Core Values -->
+  <section class="container values">
+    <div class="value"><i class="fas fa-bullseye"></i><span>Integrity</span></div>
+    <div class="value"><i class="fas fa-handshake"></i><span>Trust</span></div>
+    <div class="value"><i class="fas fa-rocket"></i><span>Innovation</span></div>
+    <div class="value"><i class="fas fa-users"></i><span>Teamwork</span></div>
+  </section>
+
+  <!-- Why Choose Us (Stylish Cards) -->
+  <section class="container cards">
+    <div class="card">
+      <h3>Fast Delivery</h3>
+      <p>We ensure your goods are delivered promptly with optimized routes.</p>
+    </div>
+    <div class="card">
+      <h3>Global Coverage</h3>
+      <p>Our logistics network spans across continents to reach any destination.</p>
+    </div>
+    <div class="card">
+      <h3>Reliable Support</h3>
+      <p>24/7 customer service ensures your shipments are always monitored.</p>
     </div>
   </section>
 
-  <!-- Company History -->
-  <section class="section">
-    <h2>Our Journey</h2>
-    <div class="timeline">
-      <div>
-        <h4>2012</h4>
-        <p>Founded with a vision to deliver reliable freight forwarding services.</p>
-      </div>
-      <div>
-        <h4>2014</h4>
-        <p>Expanded sea freight operations and established international alliances.</p>
-      </div>
-      <div>
-        <h4>2016</h4>
-        <p>Introduced advanced warehousing and 3PL services for diverse industries.</p>
-      </div>
-      <div>
-        <h4>2018</h4>
-        <p>Grew into a nationwide network with strong road and trucking solutions.</p>
-      </div>
-      <div>
-        <h4>2020</h4>
-        <p>Adopted digital logistics solutions and strengthened global footprint.</p>
-      </div>
-      <div>
-        <h4>2023</h4>
-        <p>Recognized as one of Pakistan’s fastest-growing logistics companies.</p>
-      </div>
-      <div>
-        <h4>2025</h4>
-        <p>Continuing to lead with innovation, sustainability, and customer-first logistics excellence.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Memberships -->
-  <section class="section">
-    <h2>Our Memberships</h2>
-    <div class="members">
-      <img src="./IMG/white1.jfif" alt="Membership 1">
-      <img src="./IMG/white5.jfif" alt="Membership 2">
-      <img src="./IMG/white4.jfif" alt="Membership 3">
-      <img src="./IMG/white3.jfif" alt="Membership 4">
-      <img src="./IMG/white2.jfif" alt="Membership 5">
-      <img src="./IMG/h3.jpeg" alt="Membership 6">
-    </div>
+  <!-- Final CTA -->
+  <section class="cta">
+    <h2>Ready to Move With Us?</h2>
+    <button>Contact Us Today</button>
   </section>
 
 </body>
