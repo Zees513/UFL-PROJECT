@@ -380,6 +380,21 @@
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12)
     }
 
+    .card:hover {
+    transform: translateY(-6px);
+    box-shadow:0 15px 25px rgba(0,0,0,0.15);
+  }
+
+  @media(max-width:900px) {
+    #why {
+      flex-direction:column-reverse;
+      text-align:center;
+    }
+    .cards {
+      grid-template-columns:1fr;
+    }
+  }
+
     /* Services grid 6 cards */
     .services {
       padding: 40px 0;
@@ -773,35 +788,47 @@
   </section>
 
   <!-- Why choose us -->
-  <section id="why" class="container why">
-    <div>
-      <h2 style="color:var(--blue);margin-bottom:12px;font-size: 2.5rem;">Why Choose UFL Pakistan?</h2>
-      <p style="margin-bottom:18px;color:#374151;max-width:720px;font-size: 1.2rem;">We combine local expertise with
-        global reach —
-        offering customizable, secure and trackable logistics services. Our team focuses on minimizing transit times and
-        costs while ensuring compliance and customer satisfaction.</p>
+  <section id="why" style="padding:80px 20px; background:#f5f7fa; position:relative;">
+  <div class="container" style="display:flex; flex-wrap:wrap; align-items:center; gap:40px; position:relative; z-index:2;">
+    
+    <!-- Image -->
+    <div style="flex:1; min-width:280px; text-align:center;">
+      <img src="./IMG/luggage.jfif" alt="Why UFL — logistics" style="width:100%; max-width:600px; border-radius:20px; box-shadow:0 15px 30px rgba(0,0,0,0.2);" class="animate__animated animate__zoomIn"/>
+    </div>
 
-      <div class="cards">
-        <div class="card animate__animated animate__fadeInUp">
-          <h3 style="color:white">Transparent Tracking</h3>
-          <p>Real-time updates and single-point communication for every shipment.</p>
+    <!-- Content -->
+    <div style="flex:1; min-width:280px;">
+      <h2 style="color:#1e40af; font-size:2.5rem; margin-bottom:15px;">Why Choose UFL Pakistan?</h2>
+      <p style="color:#374151; font-size:1.15rem; margin-bottom:35px; max-width:600px;">
+        Combining local expertise with global reach, UFL Pakistan provides secure, customizable, and trackable logistics services.
+        We focus on minimizing transit times and costs while ensuring full compliance and customer satisfaction.
+      </p>
+
+      <!-- Floating Cards -->
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:20px;">
+        <div class="card" style="background:#1e40af; color:white; padding:20px; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.15); transition:all 0.3s;">
+          <h3 style="margin-bottom:8px;">Transparent Tracking</h3>
+          <p style="font-size:0.95rem;">Real-time updates and single-point communication for every shipment.</p>
         </div>
-        <div class="card animate__animated animate__fadeInUp" style="animation-delay:.12s">
-          <h3 style="color:white">Customs & Compliance</h3>
-          <p>Experienced team handling documentation and regulatory requirements.</p>
+
+        <div class="card" style="background:#2563eb; color:white; padding:20px; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.15); transition:all 0.3s;">
+          <h3 style="margin-bottom:8px;">Customs & Compliance</h3>
+          <p style="font-size:0.95rem;">Experienced team handling documentation and regulatory requirements.</p>
         </div>
-        <div class="card animate__animated animate__fadeInUp" style="animation-delay:.18s">
-          <h3 style="color:white">Fast Response</h3>
-          <p>Dedicated account managers and rapid exception handling.</p>
+
+        <div class="card" style="background:#3b82f6; color:white; padding:20px; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.15); transition:all 0.3s;">
+          <h3 style="margin-bottom:8px;">Fast Response</h3>
+          <p style="font-size:0.95rem;">Dedicated account managers and rapid exception handling.</p>
+        </div>
+
+        <div class="card" style="background:#60a5fa; color:white; padding:20px; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.15); transition:all 0.3s;">
+          <h3 style="margin-bottom:8px;">Secure Delivery</h3>
+          <p style="font-size:0.95rem;">Ensuring every shipment reaches safely with full insurance coverage.</p>
         </div>
       </div>
-
     </div>
-
-    <div>
-      <img src="./IMG/luggage.jfif" alt="Why UFL — logistics" class="animate__animated animate__zoomIn" />
-    </div>
-  </section>
+  </div>
+</section>
 
   <!-- Services (6 cards) -->
   <section id="services" class="services container">
