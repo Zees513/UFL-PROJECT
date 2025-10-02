@@ -200,6 +200,12 @@
       transition: 0.3s;
       cursor: pointer;
     }
+    .value h1{
+      color:#003399 ;
+      text-align: center;
+      position: relative;
+      bottom: 60px;
+    }
 
     .value:hover {
       box-shadow: 0 0 25px #003399;
@@ -335,28 +341,69 @@
   </section>
 
   <!-- Core Values -->
-  <section class="container values">
-    <div class="value"><i class="fas fa-bullseye"></i><span>Integrity</span></div>
-    <div class="value"><i class="fas fa-handshake"></i><span>Trust</span></div>
-    <div class="value"><i class="fas fa-rocket"></i><span>Innovation</span></div>
-    <div class="value"><i class="fas fa-users"></i><span>Teamwork</span></div>
-  </section>
+  <section class="container values" style="text-align:center; padding:60px 20px;">
+  <!-- Section Heading -->
+ 
+
+  <!-- Values -->
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:40px;">
+    <div class="value" style="display:flex; flex-direction:column; align-items:center; font-size:1.1rem; color:#374151;">
+      <i class="fas fa-bullseye" style="font-size:2.5rem; color:#1e40af; margin-bottom:10px;"></i>
+      <span>Integrity</span>
+    </div>
+    <div class="value" style="display:flex; flex-direction:column; align-items:center; font-size:1.1rem; color:#374151;">
+      <i class="fas fa-handshake" style="font-size:2.5rem; color:#1e40af; margin-bottom:10px;"></i>
+      <span>Trust</span>
+    </div>
+    <div class="value" style="display:flex; flex-direction:column; align-items:center; font-size:1.1rem; color:#374151;">
+      <i class="fas fa-rocket" style="font-size:2.5rem; color:#1e40af; margin-bottom:10px;"></i>
+      <span>Innovation</span>
+    </div>
+    <div class="value" style="display:flex; flex-direction:column; align-items:center; font-size:1.1rem; color:#374151;">
+      <i class="fas fa-users" style="font-size:2.5rem; color:#1e40af; margin-bottom:10px;"></i>
+      <span>Teamwork</span>
+    </div>
+  </div>
+</section>
+
 
   <!-- Why Choose Us (Stylish Cards) -->
-  <section class="container cards">
-    <div class="card">
-      <h3>Fast Delivery</h3>
-      <p>We ensure your goods are delivered promptly with optimized routes.</p>
+  <section class="container cards" style="text-align:center; padding:60px 20px;">
+  <!-- Section Heading -->
+  <h2 style="color:#1e40af; font-size:2.5rem; margin-bottom:40px;">Our Services</h2>
+
+  <!-- Cards -->
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:30px;">
+    <div class="card" style="background:#f5f7fa; padding:25px; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.1); max-width:300px; transition:all 0.3s;">
+      <h3 style="margin-bottom:10px; color:#1e40af;">Fast Delivery</h3>
+      <p style="color:#374151;">We ensure your goods are delivered promptly with optimized routes.</p>
     </div>
-    <div class="card">
-      <h3>Global Coverage</h3>
-      <p>Our logistics network spans across continents to reach any destination.</p>
+
+    <div class="card" style="background:#f5f7fa; padding:25px; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.1); max-width:300px; transition:all 0.3s;">
+      <h3 style="margin-bottom:10px; color:#1e40af;">Global Coverage</h3>
+      <p style="color:#374151;">Our logistics network spans across continents to reach any destination.</p>
     </div>
-    <div class="card">
-      <h3>Reliable Support</h3>
-      <p>24/7 customer service ensures your shipments are always monitored.</p>
+
+    <div class="card" style="background:#f5f7fa; padding:25px; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.1); max-width:300px; transition:all 0.3s;">
+      <h3 style="margin-bottom:10px; color:#1e40af;">Reliable Support</h3>
+      <p style="color:#374151;">24/7 customer service ensures your shipments are always monitored.</p>
     </div>
-  </section>
+  </div>
+</section>
+
+<style>
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow:0 15px 30px rgba(0,0,0,0.15);
+  }
+
+  @media(max-width:900px) {
+    .cards div {
+      flex:1 1 100%;
+    }
+  }
+</style>
+
 
   <!-- Final CTA -->
   <section class="cta">
