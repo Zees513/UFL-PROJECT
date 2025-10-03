@@ -1,209 +1,395 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UFL Pakistan | Contact Us</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - UFL Logistics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* --- 0. Universal & Reset --- */
+        :root {
+            /* Color scheme based on professionalism/logistics */
+            --primary-color: #004c99; /* Deep Blue (UFL branding) */
+            --secondary-color: #ff9900; /* Amber/Orange (Accent/CTA) */
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --border-color: #ddd;
+            --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
 
-  <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Tahoma, sans-serif;
-      background: #f9fbfd;
-      color: #333;
-    }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
 
-    /* Hero */
-    .hero {
-      background-image: url("./IMG/x1.jfif");
-      background-size: cover;
-      background-position: center;
-      min-height: 350px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20px;
-    }
-    .hero h1 {
-      font-size: clamp(1.8rem, 4vw, 3rem);
-      font-weight: 700;
-      color: white;
-      margin: 0;
-    }
-    .hero p {
-      margin-top: 12px;
-      font-size: clamp(1rem, 2.5vw, 1.2rem);
-      color: white;
-      font-weight: bolder;
-      margin-bottom: 30px;
-    }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-    /* Contact Section */
-    .contact-section {
-      padding: 80px 20px;
-      max-width: 1200px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-    }
+        /* --- 1. Header (Engaging Content) --- */
+        .contact-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
 
-    /* Info box */
-    .contact-info {
-      background: linear-gradient(135deg, #002a5c, #004080);
-      color: #fff;
-      padding: 40px 30px;
-      border-radius: 20px;
-      box-shadow: 0 12px 28px rgba(0,0,0,0.15);
-    }
-    .contact-info h2 {
-      margin-bottom: 25px;
-      font-size: clamp(1.5rem, 3vw, 2rem);
-      font-weight: 700;
-    }
-    .info-item {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 18px;
-      flex-wrap: wrap;
-    }
-    .info-item i {
-      font-size: 1.4rem;
-      color: #ff4b5c;
-      margin-right: 12px;
-      flex-shrink: 0;
-      margin-top: 4px;
-    }
-    .info-item p {
-      margin: 0;
-      font-size: clamp(0.9rem, 2.5vw, 1rem);
-      word-break: break-word;
-    }
+        .contact-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
 
-    /* Form box */
-    .contact-form {
-      background: #fff;
-      padding: 40px 30px;
-      border-radius: 20px;
-      box-shadow: 0 12px 28px rgba(0,0,0,0.1);
-    }
-    .contact-form h2 {
-      margin-bottom: 20px;
-      font-size: clamp(1.5rem, 3vw, 2rem);
-      font-weight: 700;
-      color: #002a5c;
-    }
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 14px;
-      margin-bottom: 16px;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      font-size: 1rem;
-      transition: 0.3s;
-    }
-    .contact-form input:focus,
-    .contact-form textarea:focus {
-      border-color: #d90012;
-      outline: none;
-      box-shadow: 0 0 6px rgba(217,0,18,0.3);
-    }
-    .contact-form button {
-      background: linear-gradient(90deg, #d90012, #ff4b5c);
-      color: #fff;
-      border: none;
-      padding: 14px 32px;
-      border-radius: 10px;
-      font-size: 1.1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: 0.3s;
-      width: 100%;
-    }
-    .contact-form button:hover {
-      background: linear-gradient(90deg, #002a5c, #004080);
-    }
+        .contact-header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
 
-    /* Map Section */
-    .map-section {
-      margin-top: 50px;
-      padding: 0 20px;
-    }
-    .map-section iframe {
-      width: 100%;
-      height: 400px;
-      border: none;
-      border-radius: 20px;
-      box-shadow: 0 12px 28px rgba(0,0,0,0.15);
-    }
+        /* --- 2. Main Layout (Responsive Two-Column) --- */
+        .contact-section {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
 
-    /* Responsive */
-    @media (max-width: 950px) {
-      .contact-section {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-    }
-    @media (max-width: 600px) {
-      .hero {
-        padding: 50px 15px;
-      }
-      .contact-info,
-      .contact-form {
-        padding: 25px 20px;
-      }
-      .map-section iframe {
-        height: 300px;
-      }
-    }
-  </style>
+        /* --- 3. Contact Form (Left Column) --- */
+        .contact-form-container {
+            flex: 2; /* Takes up more space on desktop */
+            padding: 30px;
+            background-color: var(--light-bg);
+            border-radius: 8px;
+            box-shadow: var(--shadow-light);
+        }
+
+        .contact-form-container h2 {
+            color: var(--primary-color);
+            margin-top: 0;
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 15px;
+            font-weight: 600;
+        }
+
+        .form-intro {
+            margin-bottom: 30px;
+            font-size: 1.05rem;
+            color: #555;
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 20px;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: var(--primary-color);
+            font-size: 0.95rem;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form input[type="tel"],
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: var(--secondary-color);
+            outline: none;
+            box-shadow: 0 0 5px rgba(255, 153, 0, 0.5);
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .submit-btn:hover {
+            background-color: #e68a00;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* --- 4. Details & Map (Right Column) --- */
+        .contact-details-map {
+            flex: 1;
+        }
+
+        /* Details Card Styling (Address, Phone, Email) */
+        .details-card {
+            background-color: white;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow-light);
+        }
+
+        .details-card h3 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .icon-primary {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-top: 5px;
+        }
+
+        .detail-content h4 {
+            margin: 0 0 5px 0;
+            color: var(--primary-color);
+        }
+
+        .detail-content p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+        
+        /* Industry Image Placeholder */
+        .industry-image-placeholder {
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: var(--shadow-light);
+            /* Placeholder for a visually striking logistics image */
+            height: 250px; 
+            background: linear-gradient(rgba(0, 76, 153, 0.6), rgba(0, 76, 153, 0.6)), url('https://via.placeholder.com/600x400?text=Logistics+Operations+Image') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .image-caption {
+            color: white;
+            padding: 10px;
+            margin: 0;
+            font-style: italic;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+        }
+
+        /* --- 5. Full-Width Map Section --- */
+        .map-section {
+            margin-bottom: 60px;
+        }
+
+        .map-title {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .map-container {
+            border: 5px solid var(--primary-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .map-container iframe {
+            display: block;
+        }
+
+
+        /* --- 6. Footer Placeholder --- */
+        footer {
+            background-color: var(--text-color);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        /* --- 7. Responsiveness (Mobile First) --- */
+        @media (max-width: 900px) {
+            .contact-section {
+                flex-direction: column; /* Stack columns vertically */
+            }
+
+            .contact-form-container,
+            .contact-details-map {
+                flex: auto;
+                width: 100%;
+            }
+
+            .contact-form-container {
+                margin-bottom: 20px;
+            }
+
+            .contact-header {
+                padding: 40px 0;
+            }
+
+            .contact-header h1 {
+                font-size: 2rem;
+            }
+
+            .map-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div>
-      <h1>Contact UFL Pakistan</h1>
-      <p>We’re here to help you move your business forward</p>
-    </div>
-  </section>
+    <header class="contact-header">
+        <div class="container">
+            <h1>Let's Connect & Move Your Business Forward</h1>
+            <p>Your reliable logistics partner is ready to listen. Reach out to discuss your cargo and freight needs.</p>
+        </div>
+    </header>
 
-  <!-- Contact Section -->
-  <section class="contact-section">
-    <!-- Contact Info -->
-    <div class="contact-info">
-      <h2>Get in Touch</h2>
-      <div class="info-item"><i class="fa-solid fa-location-dot"></i><p>Address: UFL PAKISTAN SMC PRIVATE LIMITED
+    <main>
+        <div class="contact-section container">
+
+            <div class="contact-form-container">
+                <h2>Send Us A Message</h2>
+                <p class="form-intro">Whether it's a quote request, a partnership inquiry, or a general question, our team is here to provide **swift logistics solutions**.</p>
+                
+                <form action="#" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="name@company.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+92 21 3456 XXXX">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required placeholder="Inquiry: Air Freight Quote to Dubai">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message *</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Describe your logistics challenge, cargo details, or service requirement..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane"></i> Send Inquiry
+                    </button>
+                </form>
+
+            </div>
+
+            <div class="contact-details-map">
+                
+                <div class="details-card">
+                    <h3>Our Global Headquarters</h3>
+                    
+                    <div class="detail-item">
+                        <i class="fas fa-map-marker-alt icon-primary"></i>
+                        <div class="detail-content">
+                            <h4>Full Address Detail</h4>
+                            <p><strong>UFL PAKISTAN SMC PRIVATE LIMITED
 SUITE 1615, 16TH FLOOR, MUHAMMADI TRADE TOWER,
-SHAHRAH-E-LIAQUAT,NEW CHALLI, KARACHI-PAKISTAN</p></div>
-      <div class="info-item"><i class="fa-solid fa-envelope"></i><p>query@uflpk.com</p></div>
-      <div class="info-item"><i class="fa-solid fa-phone"></i><p>+92-21-32371057</p></div>
-      <div class="info-item"><i class="fa-solid fa-clock"></i><p>Mon - Sat: 9:00 AM - 6:00 PM</p></div>
-    </div>
+SHAHRAH-E-LIAQUAT,NEW CHALLI, KARACHI-PAKISTAN</strong><br>**</p>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <i class="fas fa-phone-alt icon-primary"></i>
+                        <div class="detail-content">
+                            <h4>Phone No.</h4>
+                            <p><strong> +92 21 32371057</strong></p>
+                        </div>
+                    </div>
 
-    <!-- Contact Form (Formspree integration) -->
-    <div class="contact-form">
-      <h2>Send Us a Message</h2>
-      <form action="https://formspree.io/f/mvgwkeak" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="_replyto" placeholder="Your Email" required>
-        <input type="text" name="phone" placeholder="Your Phone">
-        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-  </section>
+                    <div class="detail-item">
+                        <i class="fas fa-envelope icon-primary"></i>
+                        <div class="detail-content">
+                            <h4>Email</h4>
+                            <p><strong>General Inquiries:</strong> query@uflpk.com<br>
+                                <strong>Client Support:</strong>support@uflpk.com</p>
+                        </div>
+                    </div>
+                </div>
 
-  <!-- Map Section -->
-  <section class="map-section">
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.829835360215!2d67.00113621500238!3d24.86073498406006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e4d03f9b2d3%3A0xf38a2b68b3b66c6!2sKarachi!5e0!3m2!1sen!2s!4v1700000000000" 
-      allowfullscreen="" loading="lazy">
-    </iframe>
-  </section>
+                <div class="industry-image-placeholder">
+                    <p class="image-caption">Driving Commerce. Delivering Trust. Across All Borders.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <section class="map-section">
+            <h2 class="map-title">View Our Logistics Base</h2>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115682.2616892305!2d66.97652796440263!3d24.965452292211477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb338b087094247%3A0x868b209fa5d0d62a!2sPort%20Qasim%20Industrial%20Area%2C%20Karachi%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2sus!4v1699047250000!5m2!1sen!2sus" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+
+    </main>
+
+    
 
 </body>
 </html>
