@@ -1,238 +1,256 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UFL Pakistan | career</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background: #f9f9f9;
-      color: #333;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - Join Our Team at United Freight & Logistics</title>
 
-    /* Hero Section */
-    .hero {
-      position: relative;
-      background: url("./IMG/team.jpg") no-repeat center center;
-      background-size: cover;
-      color: #fff;
-      text-align: center;
-      padding: 80px 20px;
-    }
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 31, 63, 0.6);
-      z-index: 0;
-    }
+    <style>
+        /* --- Custom CSS for Careers Page --- */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
 
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 900px;
-      margin: auto;
-    }
+        .section-padding {
+            padding: 80px 0;
+        }
+        
+        /* --- Hero Section --- */
+        .careers-hero {
+            position: relative;
+            padding: 120px 0;
+            background: url('./IMG/team.jpg') no-repeat center center;
+            /* Suggested Image: Diverse, happy, professional team in a modern office */
+            background-size: cover;
+            color: #fff;
+        }
 
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
+        .careers-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(13, 45, 93, 0.7); /* Dark blue overlay to match your brand */
+        }
 
-    .hero p {
-      font-size: 1.2rem;
-      opacity: 0.95;
-    }
+        .careers-hero .container {
+            position: relative;
+            z-index: 2;
+        }
 
-    /* Jobs Section */
-    .jobs {
-      padding: 50px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
+        .careers-hero h1 {
+            font-weight: 700;
+            font-size: 3.5rem;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        }
 
-    .jobs h2 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #001f3f;
-    }
+        /* --- Section Header --- */
+        .section-header {
+            margin-bottom: 60px;
+        }
 
-    .jobs p {
-      text-align: center;
-      color: #555;
-      margin-bottom: 40px;
-      font-size: 1rem;
-    }
+        .section-header h2 {
+            font-weight: 700;
+            color: #0d2d5d;
+        }
 
-    /* Benefits */
-    .benefits {
-      background: #001f3f;
-      color: #fff;
-      padding: 50px 20px;
-      text-align: center;
-    }
+        /* --- "Why Work With Us" Section --- */
+        .feature-card {
+            background: #fff;
+            padding: 35px 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+            border-left: 4px solid #0d2d5d; /* Primary brand color accent */
+        }
 
-    .benefits h2 {
-      margin-bottom: 30px;
-      font-size: 2rem;
-    }
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border-left-color: #D8262C; /* Your red brand accent on hover */
+        }
 
-    .benefit-list {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
+        .feature-card .feature-icon {
+            font-size: 40px;
+            color: #0d2d5d;
+            margin-bottom: 20px;
+            transition: color 0.3s ease;
+        }
 
-    .benefit {
-      flex: 1 1 250px;
-      background: #004080;
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-      transition: transform 0.3s;
-    }
+        .feature-card:hover .feature-icon {
+            color: #D8262C;
+        }
 
-    .benefit:hover {
-      transform: translateY(-5px);
-    }
+        .feature-card h5 {
+            font-weight: 600;
+            color: #0d2d5d;
+        }
+        
+        /* --- Openings & CTA Section --- */
+        .openings-section {
+            background-color: #0d2d5d; /* Dark blue background */
+            color: #fff;
+        }
 
-    .benefit i {
-      font-size: 2rem;
-      margin-bottom: 10px;
-      color: #ffdd57;
-    }
+        .openings-section h2 {
+            color: #fff;
+        }
 
-    /* Apply Form */
-    .apply {
-      padding: 50px 20px;
-      max-width: 800px;
-      margin: auto;
-    }
+        .btn-linkedin {
+            background-color: #0077b5; /* Official LinkedIn blue */
+            border-color: #0077b5;
+            color: #fff;
+            font-weight: 600;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
 
-    .apply h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #004080;
-    }
+        .btn-linkedin:hover {
+            background-color: #005e90;
+            border-color: #005e90;
+            color: #fff;
+            transform: translateY(-3px);
+        }
 
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
+        /* --- Form Section --- */
+        .form-control:focus {
+            box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+            border-color: #007bff;
+        }
 
-    input,
-    textarea {
-      padding: 12px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-    }
-
-    button {
-      background: #004080;
-      color: #fff;
-      padding: 12px;
-      border: none;
-      border-radius: 5px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    button:hover {
-      background: #001f3f;
-    }
-
-    /* Responsive */
-    @media (max-width: 992px) {
-      .hero h1 { font-size: 2.5rem; }
-      .hero p { font-size: 1.05rem; }
-    }
-
-    @media (max-width: 768px) {
-      .benefit-list { flex-direction: column; }
-      .hero { padding: 60px 15px; }
-      .hero h1 { font-size: 2rem; }
-    }
-
-    @media (max-width: 480px) {
-      .hero h1 { font-size: 1.6rem; }
-      .hero p { font-size: 0.9rem; }
-    }
-  </style>
+    </style>
 </head>
-
 <body>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Join Our Team</h1>
-      <p>Shape your future with UFL Pakistan – where opportunities meet excellence.</p>
-    </div>
-  </section>
+    <main>
 
-  <!-- Jobs Section -->
-  <section class="jobs">
-    <h2>Current Openings</h2>
-    <p>For all available job opportunities, please visit our official 
-   <a href="https://www.linkedin.com/company/86447862/admin/dashboard/" target="_blank">
-      <i class="fab fa-linkedin fa-2x" style="color:#1877F2;"></i>
-   </a>
-</p>
+        <section class="careers-hero text-center">
+            <div class="container">
+                <h1 class="display-4">Your Contribution Makes a Difference.</h1>
+                <p class="lead mt-3">Join a team that's redefining logistics in Pakistan and beyond. <br>Be a part of something bigger.</p>
+            </div>
+        </section>
 
-  </section>
+        <section class="section-padding">
+            <div class="container text-center">
+                 <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                         <div class="section-header">
+                             <h2>Shape the Future of Global Trade</h2>
+                         </div>
+                        <p class="text-secondary">At United Freight & Logistics, we are more than a company; we are a community of innovators, problem-solvers, and collaborators. We believe that every role, from operations to customer service, is critical to our mission of simplifying global trade. Here, your work has a direct impact on our clients' success and the seamless flow of commerce. We are looking for passionate individuals who are eager to grow, learn, and build a rewarding career with us.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- Benefits -->
-  <section class="benefits">
-    <h2>Why Work With Us?</h2>
-    <div class="benefit-list">
-      <div class="benefit">
-        <i class="fas fa-briefcase"></i>
-        <h4>Career Growth</h4>
-        <p>Opportunities to grow professionally with training and mentorship.</p>
-      </div>
-      <div class="benefit">
-        <i class="fas fa-users"></i>
-        <h4>Great Culture</h4>
-        <p>Work in a collaborative and inclusive environment.</p>
-      </div>
-      <div class="benefit">
-        <i class="fas fa-medal"></i>
-        <h4>Recognition</h4>
-        <p>We value and reward hard work and innovation.</p>
-      </div>
-      <div class="benefit">
-        <i class="fas fa-plane"></i>
-        <h4>Global Exposure</h4>
-        <p>Work on projects with international clients and expand your horizons.</p>
-      </div>
-    </div>
-  </section>
+        <section id="why-us" class="section-padding bg-white">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>Why Work With Us?</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-users-line"></i></div>
+                            <h5>Dynamic Work Environment</h5>
+                            <p class="text-secondary">Experience a collaborative and fast-paced culture where your ideas are valued. We support each other to achieve common goals and celebrate our collective successes.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                            <h5>Learning & Development</h5>
+                            <p class="text-secondary">We invest in your growth. With access to continuous training, mentorship programs, and opportunities for advancement, you can build a long-term career path at UFL.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-handshake-angle"></i></div>
+                            <h5>Diversity & Inclusion</h5>
+                            <p class="text-secondary">We believe our strength lies in our differences. We are committed to fostering an inclusive environment where everyone feels respected, valued, and empowered to bring their whole self to work.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-coins"></i></div>
+                            <h5>Benefits & Compensation</h5>
+                            <p class="text-secondary">Your well-being is our priority. We offer competitive salaries, comprehensive health benefits, and performance-based incentives to reward your hard work and dedication.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- Apply Form -->
-  <section class="apply">
-    <h2>Submit Your CV</h2>
-    <form>
-      <input type="text" placeholder="Full Name" required>
-      <input type="email" placeholder="Email Address" required>
-      <input type="text" placeholder="Phone Number" required>
-      <input type="file" required>
-      <textarea rows="5" placeholder="Your Message (Optional)"></textarea>
-      <button type="submit">Submit Application</button>
-    </form>
-  </section>
+        <section class="openings-section section-padding text-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <i class="fab fa-linkedin fa-3x mb-4"></i>
+                        <h2>Current Job Openings</h2>
+                        <p class="lead my-4">All our current vacancies are posted on our official LinkedIn page. Follow us to stay updated on the latest opportunities to join our growing team.</p>
+                        <a href="https://www.linkedin.com/company/86447862/admin/dashboard/" target="_blank" class="btn btn-linkedin">
+                            <i class="fab fa-linkedin-in me-2"></i> View Open Positions on LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>Don't See a Fit? Introduce Yourself.</h2>
+                    <p class="text-secondary">We are always looking for exceptional talent. If you believe you have what it takes to make a difference at UFL, <br>fill out the form below and tell us why you'd be a great addition to our team.</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <form action="[YOUR_FORM_HANDLER_URL]" method="POST" enctype="multipart/form-data">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="fullName" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="fullName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="cv" class="form-label">Upload Your CV/Resume (PDF, DOCX)</label>
+                                    <input class="form-control" type="file" id="cv" accept=".pdf,.doc,.docx" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Cover Letter / Message</label>
+                                    <textarea class="form-control" id="message" rows="5" placeholder="Tell us why you want to work with us..." required></textarea>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-primary px-5 py-2">Submit Application</button>
+                                </div>
+                            </div>
+                        </form>
+                        <p class="text-center text-secondary mt-4">You can also reach our HR department directly at <a href="mailto:hr@uflpk.com">hr@uflpk.com</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
