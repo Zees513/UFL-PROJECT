@@ -395,58 +395,96 @@
     }
   }
 
-    /* Services grid 6 cards */
-    .services {
-      padding: 40px 0;
-      background: var(--muted)
-    }
+    .services-offered {
+  padding: 60px 20px;
+}
 
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px
-    }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
 
-    .service {
-      background: var(--white);
-      padding: 18px;
-      border-radius: 12px;
-      text-align: left;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
-      transition: transform .25s
-    }
+.service-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
 
-    .service:hover {
-      background-color: #013670;
-      color: #f5f7fb;
-      transform: translateY(-10px)
-    }
+.service-card:hover {
+  transform: translateY(-8px);
+}
 
-    .service:hover p {
-      color: white;
-    }
 
-    .service .icon {
-      font-size: 28px;
-      color: var(--red);
-      margin-bottom: 12px
-    }
 
-    .service h3 {
-      margin: 8px 0 10px
-    }
+.service-content h5 {
+  font-size: 1.5rem;
+  color: var(--blue);
+  margin-bottom: 10px;
+}
 
-    .service p {
-      font-size: 14px;
-      color: #000000
-    }
+.service-content p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--blue);
+}
 
-    .service .more {
-      display: inline-block;
-      margin-top: 12px;
-      color: var(--red);
-      font-weight: 700
-    }
+/* Section Title */
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .service-content h5 {
+    font-size: 1.1rem;
+    
+  }
+
+  .service-content p {
+    font-size: 0.9rem;
+    
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    padding: 15px;
+  }
+
+  .service-content h5 {
+    font-size: 1rem;
+    position: relative;
+    bottom: 80px;
+  }
+
+  .service-content p {
+    font-size: 0.85rem;
+    position: relative;
+    bottom: 80px;
+  }
+}
 
     /* Partner Logos */
     .partner-logos {
@@ -831,55 +869,62 @@
 </section>
 
   <!-- Services (6 cards) -->
-  <section id="services" class="services container">
-    <h2 style="text-align:center;color:var(--blue);margin-bottom:22px;font-size: 2.5rem;">Services Offered</h2>
-    <div class="services-grid">
+  <section class="services-offered section-padding" style="background-color: #001f3f;">
+            <div class="container">
+                <h2 class="section-title" style="color: white;text-align: center;font-size: 2.5rem;">Comprehensive Logistics Services</h2>
+                <div class="services-grid">
+                    
+                    <div class="service-card">
+                        <div class="service-img-placeholder"></div>
+                        <div class="service-content">
+                            <h5>Ocean Freight <i class="fas fa-ship"></i></h5>
+                            <p>Reliable FCL and LCL solutions connecting Pakistan to every major port globally.</p>
+                        </div>
+                    </div>
 
-      <div class="service animate__animated animate__fadeInUp">
-        <div class="icon"><i class="fa-solid fa-ship"></i></div>
-        <h3>Ocean Freight</h3>
-        <p>Full-container and LCL shipments with trusted carriers and consolidation options.</p>
-        <a class="more" href="#">Know More &rarr;</a>
-      </div>
+                    <div class="service-card">
+                        <div class="service-img-placeholder"></div>
+                        <div class="service-content">
+                            <h5>Air Freight <i class="fas fa-plane"></i></h5>
+                            <p>Speed and reliability for time-critical shipments with flexible cargo options.</p>
+                        </div>
+                    </div>
 
-      <div class="service animate__animated animate__fadeInUp" style="animation-delay:.08s">
-        <div class="icon"><i class="fa-solid fa-plane"></i></div>
-        <h3>Air Freight</h3>
-        <p>Priority and economy services, door-to-door options for urgent cargo.</p>
-        <a class="more" href="#">Know More &rarr;</a>
-      </div>
+                    <div class="service-card">
+                        <div class="service-img-placeholder"></div>
+                        <div class="service-content">
+                            <h5>Road & Trucking <i class="fas fa-truck"></i></h5>
+                            <p>Efficient inland transport, first-mile/last-mile delivery, and cross-border trucking.</p>
+                        </div>
+                    </div>
 
-      <div class="service animate__animated animate__fadeInUp" style="animation-delay:.14s">
-        <div class="icon"><i class="fa-solid fa-truck"></i></div>
-        <h3>Road & Trucking</h3>
-        <p>Domestic and cross-border transport with GPS-tracked fleet.</p>
-        <a class="more" href="#">Know More &rarr;</a>
-      </div>
+                    <div class="service-card">
+                        <div class="service-img-placeholder"></div>
+                        <div class="service-content">
+                            <h5>Warehousing & 3PL <i class="fas fa-warehouse"></i></h5>
+                            <p>Integrated supply chain management, storage, inventory, and distribution services.</p>
+                        </div>
+                    </div>
 
-      <div class="service animate__animated animate__fadeInUp" style="animation-delay:.2s">
-        <div class="icon"><i class="fa-solid fa-warehouse"></i></div>
-        <h3>Warehousing & 3PL</h3>
-        <p>Temperature-controlled, bonded and distribution-ready storage solutions.</p>
-        <a class="more" href="#">Know More &rarr;</a>
-      </div>
+                    <div class="service-card">
+                        <div class="service-img-placeholder"></div>
+                        <div class="service-content">
+                            <h5>Custom Clearance <i class="fas fa-passport"></i></h5>
+                            <p>Expert handling of all import/export formalities for rapid border transit.</p>
+                        </div>
+                    </div>
 
-      <div class="service animate__animated animate__fadeInUp" style="animation-delay:.26s">
-        <div class="icon"><i class="fa-solid fa-box-open"></i></div>
-        <h3>Custom Clearance</h3>
-        <p>Expert handling of all import/export documentation & certifications.</p>
-        <a class="more" href="#">Know More &rarr;</a>
-      </div>
+                    <div class="service-card">
+                        <div class="service-img-placeholder"></div>
+                        <div class="service-content">
+                            <h5>Project & Heavy Lift <i class="fas fa-cogs"></i></h5>
+                            <p>Specialized handling for oversized, heavy, and complex industrial projects.</p>
+                        </div>
+                    </div>
 
-      <div class="service animate__animated animate__fadeInUp" style="animation-delay:.32s">
-        <div class="icon"><i class="fa-solid fa-people-carry-box"></i></div>
-        <h3>Project & Heavy Lift</h3>
-        <p>Engineering, route surveying and heavy equipment transport for large projects.</p>
-        <a class="more" href="#">Know More &rarr;</a>
-      </div>
-
-    </div>
-  </section>
-
+                </div>
+            </div>
+        </section>
   <!-- Partners  -->
   <section id="partners" class="partners container">
     <h2 style="text-align:center;color:var(--blue);font-size: 2.5rem;">Our Memberships:</h2>
