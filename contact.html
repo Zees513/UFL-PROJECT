@@ -290,6 +290,7 @@
     </style>
 </head>
 <body>
+    <div id="header"></div>
 
     <header class="contact-header">
         <div class="container">
@@ -375,21 +376,35 @@ SHAHRAH-E-LIAQUAT,NEW CHALLI, KARACHI-PAKISTAN</strong><br>**</p>
         </div>
 
         <section class="map-section">
-            <h2 class="map-title">View Our Logistics Base</h2>
+            <h2 class="map-title"> Our Location</h2>
             <div class="map-container">
                 <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115682.2616892305!2d66.97652796440263!3d24.965452292211477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb338b087094247%3A0x868b209fa5d0d62a!2sPort%20Qasim%20Industrial%20Area%2C%20Karachi%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2sus!4v1699047250000!5m2!1sen!2sus" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115851.04959719839!2d66.92459895527067!3d24.85205360301538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f8cdd2545ed%3A0xa66c6f9b4b671fa5!2sUFL%20Pakistan%20(SMC-PVT)%20Ltd!5e0!3m2!1sen!2s!4v1759867213776!5m2!1sen!2s" 
                     width="100%" 
                     height="450" 
                     style="border:0;" 
                     allowfullscreen="" 
-                    loading="lazy" 
+                    loading="Fast" 
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
         </section>
 
     </main>
+    <div id="footer"></div>
+
+
+    <script>
+    // Load Header
+    fetch("header.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("header").innerHTML = data);
+
+    // Load Footer
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
+  </script>
 
     
 

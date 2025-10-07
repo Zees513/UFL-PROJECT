@@ -8,6 +8,7 @@
     <meta name="description"
         content="Learn about UFL Pakistan's mission to be the most reliable and sustainable logistics partner, connecting local expertise with global reach.">
 
+    <!-- ✅ Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -50,7 +51,7 @@
         /* --- Global Typography & Buttons --- */
         h1,
         h2,
-        h3 {
+        .mine {
             font-weight: 700;
             line-height: 1.2;
             margin-bottom: 0.5em;
@@ -66,7 +67,7 @@
             margin-bottom: var(--spacing-medium);
         }
 
-        h3 {
+        .mine {
             font-size: 1.75rem;
         }
 
@@ -120,50 +121,11 @@
             color: var(--color-white);
         }
 
-        /* --- Header/Navigation --- */
-        .site-header {
-            background-color: var(--ufl-dark-blue);
-            color: var(--color-white);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            text-decoration: none;
-            color: var(--color-white);
-        }
-
-        .nav-links a {
-            color: var(--color-white);
-            text-decoration: none;
-            margin-left: 1.5rem;
-            font-weight: 600;
-        }
-
-        .nav-toggle {
-            display: none;
-            font-size: 1.5rem;
-            background: none;
-            border: none;
-            color: var(--color-white);
-            cursor: pointer;
-        }
+    
 
         /* --- 1. HERO SECTION --- */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                url('./IMG/move.jfif') center center/cover no-repeat;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./IMG/move.jfif') center center/cover no-repeat;
             min-height: 70vh;
             display: flex;
             align-items: center;
@@ -398,26 +360,6 @@
             margin-bottom: 0.5rem;
         }
 
-        .site-footer {
-            background-color: var(--ufl-dark-blue);
-            color: var(--color-white);
-            padding: var(--spacing-medium) 0;
-            font-size: 0.9rem;
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .footer-content a {
-            color: var(--ufl-green);
-            text-decoration: none;
-            margin-left: 1rem;
-        }
-
         /* --- Animations (Fade-in on scroll) --- */
         .fade-in {
             opacity: 0;
@@ -481,7 +423,7 @@
                 top: 60px;
                 left: 0;
                 width: 100%;
-                background-color: var(--ufl-dark-blue);
+                background-color: white;
                 padding: 1rem 0;
             }
 
@@ -532,20 +474,7 @@
 
 <body>
 
-    <header class="site-header">
-        <div class="nav-container container">
-            <a href="./index.html" class="logo">UFL Pakistan</a>
-            <nav class="nav-links" id="navLinks">
-                <a href="./index.html">Home</a>
-                <a href="#purpose">About Us</a>
-                <a href="./services.html">Services</a>
-                <a href="./contact.html">Contact Us</a>
-            </nav>
-            <button class="nav-toggle" aria-label="Toggle navigation"
-                onclick="document.getElementById('navLinks').classList.toggle('active')"><i
-                    class="fas fa-bars"></i></button>
-        </div>
-    </header>
+    <div id="header"></div>
 
     <main>
         <section class="hero">
@@ -553,38 +482,31 @@
                 <h1>Empowering Pakistan's Supply Chains for a Connected World.</h1>
                 <p>From local roots to global reach, we are the trusted partner building smarter, more resilient, and
                     sustainable logistics solutions for everyone.</p>
-                <div class="cta-group">
-                    <a href="#purpose" class="btn btn-primary" style="background-color:#002e5b ;border:1px solid red;">Learn About Us</a>
-                    <a href="./contact.html" class="btn btn-secondary">Get a Quote</a>
-                </div>
+                <div class="cta-group"> <a href="#purpose" class="btn btn-primary"
+                        style="background-color:#002e5b ;border:1px solid red;">Learn About Us</a> <a
+                        href="./contact.html" class="btn btn-secondary">Get a Quote</a> </div>
             </div>
         </section>
-
         <section class="stats-at-glance section-padding bg-light" id="stats">
             <div class="container fade-in">
                 <h2 class="text-center">UFL Pakistan At a Glance</h2>
                 <div class="stats-grid">
-                    <div class="stat-item">
-                        <span class="stat-number" data-target="500">0</span>+
-                        <p class="stat-label">Global Partner Network</p>
+                    <div class="stat-item"> <span class="stat-number" data-target="500">0</span>+ <p class="stat-label">
+                            Global Partner Network</p>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-target="10000">0</span>+
-                        <p class="stat-label">Shipments Fulfilled Annually</p>
+                    <div class="stat-item"> <span class="stat-number" data-target="10000">0</span>+ <p
+                            class="stat-label">Shipments Fulfilled Annually</p>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-target="150">0</span>+
-                        <p class="stat-label">Countries Served</p>
+                    <div class="stat-item"> <span class="stat-number" data-target="150">0</span>+ <p class="stat-label">
+                            Countries Served</p>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-target="2000">0</span>+
-                        <p class="stat-label">Satisfied Clients</p>
+                    <div class="stat-item"> <span class="stat-number" data-target="2000">0</span>+ <p
+                            class="stat-label">Satisfied Clients</p>
                     </div>
                 </div>
                 <div class="text-center"><a href="#purpose" class="btn btn-secondary">Our Full Story</a></div>
             </div>
         </section>
-
         <section class="evolution section-padding" id="purpose">
             <div class="container evolution-story fade-in">
                 <div class="evolution-text">
@@ -606,35 +528,29 @@
                 <div class="evolution-image-placeholder"></div>
             </div>
         </section>
-
         <section class="values section-padding bg-light">
             <div class="container fade-in">
                 <h2 class="text-center">Our Core Pillars: Values in Action</h2>
                 <div class="values-grid">
-                    <div class="value-card">
-                        <i class="fas fa-seedling"></i>
-                        <h3>Sustainability & Impact</h3>
+                    <div class="value-card"> <i class="fas fa-seedling"></i>
+                        <h3 class="mine">Sustainability & Impact</h3>
                         <p>We believe in growth that doesn't compromise the planet. Our operations prioritize
                             eco-friendly practices, including route optimization for lower emissions and partnering with
                             green carriers.</p>
                     </div>
-                    <div class="value-card">
-                        <i class="fas fa-chart-line"></i>
-                        <h3>Efficiency & Intelligence</h3>
+                    <div class="value-card"> <i class="fas fa-chart-line"></i>
+                        <h3 class="mine">Efficiency & Intelligence</h3>
                         <p>We minimize transit times and costs through the application of digital tools and predictive
                             analytics, turning complex supply chains into smooth, optimized user experiences.</p>
                     </div>
-                    <div class="value-card">
-                        <i class="fas fa-hands-helping"></i>
-                        <h3>Partnership & Trust</h3>
+                    <div class="value-card"> <i class="fas fa-hands-helping"></i>
+                        <h3 class="mine">Partnership & Trust</h3>
                         <p>Our foundation is built on long-term relationships. We act as an extension of your team,
                             providing customer-first strategies, integrity, and absolute accountability.</p>
                     </div>
                 </div>
             </div>
         </section>
-
-
         <section class="giving-back section-padding bg-light">
             <div class="container fade-in">
                 <h2 class="text-center">UFL Cares: Giving Back to Pakistan</h2>
@@ -645,14 +561,12 @@
                             sustainable development initiatives.</p>
                         <p>From providing pro-bono logistics for local charities to implementing a community-first
                             hiring strategy, we are invested in fostering economic growth and environmental stewardship
-                            right here in Pakistan.</p>
-                        <a href="#impact" class="btn btn-secondary" style="margin-left: 0;">View Impact Report <i
-                                class="fas fa-file-alt"></i></a>
+                            right here in Pakistan.</p> <a href="#impact" class="btn btn-secondary"
+                            style="margin-left: 0;">View Impact Report <i class="fas fa-file-alt"></i></a>
                     </div>
                     <div class="cares-image-placeholder"></div>
                 </div>
-
-                <h3 class="text-center" style="margin-top: 4rem;">Proud Memberships & Global Partners</h3>
+                <h3 class="text-center mine" style="margin-top: 4rem;">Proud Memberships & Global Partners</h3>
                 <div class="partners-grid fade-in">
                     <div class="partner-logo"><img src="https://via.placeholder.com/100x40?text=FIATA" alt="FIATA Logo">
                     </div>
@@ -669,65 +583,198 @@
                 </div>
             </div>
         </section>
-
         <section class="final-ctas section-padding">
             <div class="container fade-in">
                 <h2 class="text-center">Take the Next Step with UFL Pakistan</h2>
                 <div class="final-cta-grid">
-                    <div class="cta-card">
-                        <i class="fas fa-briefcase"></i>
-                        <h3>Start Your UFL Story</h3>
+                    <div class="cta-card"> <i class="fas fa-briefcase"></i>
+                        <h3 class="mine">Start Your UFL Story</h3>
                         <p>Explore career opportunities and join a team dedicated to innovation and excellence in
-                            logistics.</p>
-                        <a href="./career.html" class="btn btn-secondary">View Careers</a>
+                            logistics.</p> <a href="./career.html" class="btn btn-secondary">View Careers</a>
                     </div>
-                    <div class="cta-card">
-                        <i class="fas fa-newspaper"></i>
-                        <h3>Company News & Media</h3>
-                        <p>Stay updated on our latest projects, press releases, and industry insights.</p>
-                        <a href="./news.html" class="btn btn-secondary">Read News</a>
+                    <div class="cta-card"> <i class="fas fa-newspaper"></i>
+                        <h3 class="mine">Company News & Media</h3>
+                        <p>Stay updated on our latest projects, press releases, and industry insights.</p> <a
+                            href="./news.html" class="btn btn-secondary">Read News</a>
                     </div>
-                    <div class="cta-card">
-                        <i class="fas fa-handshake"></i>
-                        <h3>Sponsorships & Events</h3>
-                        <p>Learn how UFL supports local sports, community events, and partnerships.</p>
-                        <a href="./contact.html#sponsorship" class="btn btn-secondary">Inquire Now</a>
+                    <div class="cta-card"> <i class="fas fa-handshake"></i>
+                        <h3 class="mine">Sponsorships & Events</h3>
+                        <p>Learn how UFL supports local sports, community events, and partnerships.</p> <a
+                            href="./contact.html#sponsorship" class="btn btn-secondary">Inquire Now</a>
                     </div>
                 </div>
             </div>
         </section>
+    </main> <!-- ✅ Your full page HTML content (unchanged) -->
     </main>
 
-    <footer class="site-footer">
-        <div class="container footer-content">
-            <p>&copy; 2025 UFL Pakistan. All Rights Reserved.</p>
-            <p>
-                <a href="tel:+922132371057"><i class="fas fa-phone"></i> +92-21-32371057</a> |
-                <a href="mailto:query@uflpk.com"><i class="fas fa-envelope"></i> query@uflpk.com</a>
-            </p>
-        </div>
-    </footer>
+    <div id="footer"></div>
+<script>
+/*
+  Robust hamburger handler for dynamically-injected header
+  - Waits for #header to be present
+  - Searches for common nav toggles and nav containers inside header
+  - Toggles "active" class and also applies fallback inline display if needed
+  - Works even if header.html uses different selectors (.nav-links or #navLinks)
+*/
+document.addEventListener('DOMContentLoaded', () => {
+
+  // waitForSelector: resolves when selector appears under parent (document or element)
+  function waitForSelector(selector, parent = document, timeout = 5000) {
+    return new Promise((resolve, reject) => {
+      try {
+        const found = parent.querySelector(selector);
+        if (found) return resolve(found);
+
+        const observerTarget = parent === document ? document.documentElement : parent;
+        const observer = new MutationObserver(() => {
+          const el = parent.querySelector(selector);
+          if (el) {
+            observer.disconnect();
+            return resolve(el);
+          }
+        });
+        observer.observe(observerTarget, { childList: true, subtree: true });
+
+        setTimeout(() => {
+          observer.disconnect();
+          reject(new Error('timeout'));
+        }, timeout);
+      } catch (err) {
+        reject(err);
+      }
+    });
+  }
+
+  // Wait for the header container to be in DOM (injected by loadPart)
+  waitForSelector('#header', document, 5000).then(headerEl => {
+    // Now wait (short) for nav-toggle or nav to appear inside header
+    const toggleSelectors = ['.nav-toggle', '[data-nav-toggle]', '#hamburger', '.hamburger'];
+    const navSelectors = ['#navLinks', '.nav-links', 'nav ul', 'nav .nav-links', 'ul.nav-links'];
+
+    // Helper to find first existing element among many selectors
+    function findOne(parent, selectors) {
+      for (const s of selectors) {
+        const el = parent.querySelector(s);
+        if (el) return el;
+      }
+      return null;
+    }
+
+    // Try to find elements (give them up to 5s)
+    Promise.all([
+      waitForSelector(toggleSelectors.join(','), headerEl, 5000).catch(() => null),
+      waitForSelector(navSelectors.join(','), headerEl, 5000).catch(() => null)
+    ]).then(([maybeToggle, maybeNav]) => {
+
+      // If both found, attach direct handler(s)
+      if (maybeToggle && maybeNav) {
+        // there might be multiple toggles; attach to all
+        const toggles = headerEl.querySelectorAll(toggleSelectors.join(','));
+        toggles.forEach(t => {
+          t.setAttribute('aria-expanded', 'false');
+          t.addEventListener('click', (e) => {
+            e.preventDefault();
+            // toggle class
+            maybeNav.classList.toggle('active');
+            const expanded = maybeNav.classList.contains('active');
+            toggles.forEach(tt => tt.setAttribute('aria-expanded', expanded ? 'true' : 'false'));
+
+            // Fallback: if CSS still hides it (computed display none), set inline style
+            const cs = window.getComputedStyle(maybeNav);
+            if (expanded && cs.display === 'none') {
+              // try to guess a good display
+              const prefer = (maybeNav.tagName.toLowerCase() === 'ul' || maybeNav.classList.contains('nav-links')) ? 'flex' : 'block';
+              maybeNav.style.display = prefer;
+            } else if (!expanded) {
+              maybeNav.style.display = '';
+            }
+          });
+        });
+        return;
+      }
+
+      // If not both found, add a delegated click listener that will toggle first-found nav when hamburger clicked
+      document.addEventListener('click', (ev) => {
+        const clickedToggle = ev.target.closest(toggleSelectors.join(','));
+        if (!clickedToggle) return;
+
+        // find nav now (attempt multiple places)
+        let nav = findOne(headerEl, navSelectors) || document.querySelector(navSelectors.join(','));
+        if (!nav) {
+          // nothing found — nothing to toggle
+          return;
+        }
+
+        nav.classList.toggle('active');
+        const expanded = nav.classList.contains('active');
+        clickedToggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+
+        // Fallback inline display if CSS hides it
+        const cs = window.getComputedStyle(nav);
+        if (expanded && cs.display === 'none') {
+          const prefer = (nav.tagName.toLowerCase() === 'ul' || nav.classList.contains('nav-links')) ? 'flex' : 'block';
+          nav.style.display = prefer;
+        } else if (!expanded) {
+          nav.style.display = '';
+        }
+      });
+    });
+
+  }).catch(() => {
+    // header didn't appear in time — still attach delegated click so it will work when header appears later
+    document.addEventListener('click', (ev) => {
+      const clickedToggle = ev.target.closest('.nav-toggle, [data-nav-toggle], #hamburger, .hamburger');
+      if (!clickedToggle) return;
+      const nav = document.querySelector('#navLinks, .nav-links, nav ul, ul.nav-links');
+      if (!nav) return;
+      nav.classList.toggle('active');
+      const expanded = nav.classList.contains('active');
+      clickedToggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      const cs = window.getComputedStyle(nav);
+      if (expanded && cs.display === 'none') {
+        nav.style.display = (nav.tagName.toLowerCase() === 'ul' || nav.classList.contains('nav-links')) ? 'flex' : 'block';
+      } else if (!expanded) {
+        nav.style.display = '';
+      }
+    });
+  });
+
+});
+</script>
 
     <script>
-        // JS for Mobile Menu Toggle
-        document.querySelector('.nav-toggle').addEventListener('click', function () {
-            document.getElementById('navLinks').classList.toggle('active');
-        });
+        async function loadPart(id, file) {
+            try {
+                const response = await fetch(file);
+                if (!response.ok) throw new Error(file + " not found");
+                const html = await response.text();
+                document.getElementById(id).innerHTML = html;
+            } catch (err) {
+                console.error("Error loading " + file, err);
+            }
+        }
 
-        // JS for Fade-in on Scroll Animation & Metric Counters
-        document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener("DOMContentLoaded", () => {
+            loadPart("header", "header.html");
+            loadPart("footer", "footer.html");
+
+            document.addEventListener("click", e => {
+                if (e.target.classList.contains("nav-toggle")) {
+                    document.getElementById("navLinks").classList.toggle("active");
+                }
+            });
+
             const faders = document.querySelectorAll('.fade-in');
             const metricsSection = document.getElementById('stats');
             const metrics = document.querySelectorAll('.stat-number');
             let metricsAnimated = false;
-
-            const appearOptions = { threshold: 0.2 }; // Element becomes visible when 20% is in view
+            const appearOptions = { threshold: 0.2 };
 
             const appearOnScroll = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('is-visible');
-                        // If it's the metrics section, start the counter animation
                         if (entry.target.id === 'stats' && !metricsAnimated) {
                             animateMetrics();
                             metricsAnimated = true;
@@ -737,17 +784,14 @@
                 });
             }, appearOptions);
 
-            faders.forEach(fader => { appearOnScroll.observe(fader); });
-
-            // Initialize observer for the stats section
-            if (metricsSection) { appearOnScroll.observe(metricsSection); }
+            faders.forEach(fader => appearOnScroll.observe(fader));
+            if (metricsSection) appearOnScroll.observe(metricsSection);
 
             function animateMetrics() {
                 metrics.forEach(metric => {
                     const target = +metric.getAttribute('data-target');
                     let current = 0;
-                    const increment = target / 150; // Speed adjustment
-
+                    const increment = target / 150;
                     const updateCount = () => {
                         if (current < target) {
                             current += increment;
@@ -765,3 +809,4 @@
 </body>
 
 </html>
+```
