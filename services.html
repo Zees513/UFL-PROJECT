@@ -396,7 +396,7 @@
     }
 
     @media (max-width:600px) {
-      
+
 
       .card-media {
         height: 150px
@@ -561,8 +561,8 @@
 
   <main class="page"> <!-- Header with UFL logo -->
 
-    
-     <!-- Controls -->
+
+    <!-- Controls -->
     <div class="controls">
       <div class="tabs" role="tablist" aria-label="Service categories"> <button class="tab active"
           data-filter="all">All</button> <button class="tab" data-filter="ocean">Ocean</button> <button class="tab"
@@ -700,7 +700,7 @@
         </div>
       </div>
     </div>
-    <section style="background:#f9fbfd;text-align:center;position: relative;bottom: 30px;">
+    <section style="background:#f9fbfd;text-align:center;position: relative;bottom: 30px;margin-top: 100px;">
       <h2 style="font-size:2rem;color:#002a5c;margin-bottom:10px;"> Why Choose <span style="color:#d90012;">UFL
           Pakistan</span>? </h2>
       <p style="max-width:700px;margin:0 auto 40px;color:#444;font-size:1.1rem;"> With decades of expertise, global
@@ -748,7 +748,7 @@
         </div>
       </div>
     </section> <!-- Extra Section: Call To Action -->
-    <section style="padding:100px 20px;background:linear-gradient(90deg,#002a5c,#d90012);color:#fff;text-align:center;">
+    <section style="padding:100px 20px;background:linear-gradient(90deg,#002a5c,#d90012);color:#fff;text-align:center;margin-top:40px">
       <h2 style="font-size:2.2rem;margin-bottom:14px;">Ready to Ship with UFL?</h2>
       <p style="max-width:650px;margin:0 auto 28px;font-size:1.1rem;"> Let’s optimize your supply chain with our expert
         logistics and freight forwarding services. </p> <a href="./contact.html"
@@ -756,71 +756,75 @@
         Contact Us Today </a>
     </section>
   </main>
-    <div id="footer"></div>
-    <script>
-      // Load Header
-      fetch("header.html")
-        .then(response => response.text())
-        .then(data => document.getElementById("header").innerHTML = data);
+  <div id="footer"></div>
+  <script>
+    // Load Header
+  fetch("header.html")
+  .then(response => response.text())
+  .then(data => {
+      document.getElementById("header").innerHTML = data;
+      console.log(data); 
+  });
 
-      // Load Footer
-      fetch("footer.html")
-        .then(response => response.text())
-        .then(data => document.getElementById("footer").innerHTML = data);
-    </script>
-    <script>
-      const tabs = document.querySelectorAll('.tab');
-      const cards = document.querySelectorAll('.card');
-      const sortSel = document.getElementById('sortSel');
-      const modal = document.getElementById('svcModal');
-      const modalImg = document.getElementById('modalImg');
-      const modalTitle = document.getElementById('modalTitle');
-      const modalDesc = document.getElementById('modalDesc');
-      const closeBtn = document.querySelector('.modal-close');
 
-      tabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-          tabs.forEach(t => t.classList.remove('active'));
-          tab.classList.add('active');
-          const filter = tab.dataset.filter;
-          cards.forEach(card => {
-            card.style.display = (filter === 'all' || card.dataset.type === filter) ? '' : 'none';
-          });
+    // Load Footer
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("footer").innerHTML = data);
+  </script>
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const cards = document.querySelectorAll('.card');
+    const sortSel = document.getElementById('sortSel');
+    const modal = document.getElementById('svcModal');
+    const modalImg = document.getElementById('modalImg');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDesc = document.getElementById('modalDesc');
+    const closeBtn = document.querySelector('.modal-close');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const filter = tab.dataset.filter;
+        cards.forEach(card => {
+          card.style.display = (filter === 'all' || card.dataset.type === filter) ? '' : 'none';
         });
       });
+    });
 
-      sortSel.addEventListener('change', () => {
-        const grid = document.getElementById('servicesGrid');
-        const sorted = Array.from(cards).sort((a, b) => {
-          if (sortSel.value === 'az') return a.textContent.localeCompare(b.textContent);
-          if (sortSel.value === 'za') return b.textContent.localeCompare(a.textContent);
-          return 0;
-        });
-        grid.innerHTML = '';
-        sorted.forEach(card => grid.appendChild(card));
+    sortSel.addEventListener('change', () => {
+      const grid = document.getElementById('servicesGrid');
+      const sorted = Array.from(cards).sort((a, b) => {
+        if (sortSel.value === 'az') return a.textContent.localeCompare(b.textContent);
+        if (sortSel.value === 'za') return b.textContent.localeCompare(a.textContent);
+        return 0;
       });
+      grid.innerHTML = '';
+      sorted.forEach(card => grid.appendChild(card));
+    });
 
-      function openModal(btn) {
-        const card = btn.closest('.card');
-        modalImg.src = card.dataset.img;
-        modalTitle.textContent = card.querySelector('.overlay-title').textContent;
-        modalDesc.textContent = card.querySelector('.overlay-text').textContent;
-        modal.classList.add('show');
-      }
+    function openModal(btn) {
+      const card = btn.closest('.card');
+      modalImg.src = card.dataset.img;
+      modalTitle.textContent = card.querySelector('.overlay-title').textContent;
+      modalDesc.textContent = card.querySelector('.overlay-text').textContent;
+      modal.classList.add('show');
+    }
 
-      function closeModal() {
-        modal.classList.remove('show');
-      }
+    function closeModal() {
+      modal.classList.remove('show');
+    }
 
-      closeBtn.addEventListener('click', closeModal);
-      modal.addEventListener('click', e => {
-        if (e.target === modal) closeModal();
-      });
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', e => {
+      if (e.target === modal) closeModal();
+    });
 
-      function shareService(btn) {
-        alert('Share functionality coming soon!');
-      }
-    </script>
+    function shareService(btn) {
+      alert('Share functionality coming soon!');
+    }
+  </script>
 </body>
 
 </html>

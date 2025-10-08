@@ -160,7 +160,7 @@
             box-shadow: var(--shadow-light);
         }
 
-        .details-card h3 {
+        .details-card .shy {
             color: var(--primary-color);
             border-bottom: 2px solid var(--secondary-color);
             padding-bottom: 10px;
@@ -338,7 +338,7 @@
             <div class="contact-details-map">
                 
                 <div class="details-card">
-                    <h3>Our Global Headquarters</h3>
+                    <h3 class=".shy">Our Global Headquarters</h3>
                     
                     <div class="detail-item">
                         <i class="fas fa-map-marker-alt icon-primary"></i>
@@ -396,9 +396,15 @@ SHAHRAH-E-LIAQUAT,NEW CHALLI, KARACHI-PAKISTAN</strong><br>**</p>
 
     <script>
     // Load Header
-    fetch("header.html")
-      .then(response => response.text())
-      .then(data => document.getElementById("header").innerHTML = data);
+    async function loadHeader() {
+    const response = await fetch("header.html");
+    const data = await response.text();
+    document.getElementById("header").innerHTML = data;
+    console.log(data); // ✅ works here
+}
+
+loadHeader();
+
 
     // Load Footer
     fetch("footer.html")
